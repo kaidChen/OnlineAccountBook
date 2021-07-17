@@ -1,9 +1,6 @@
-package com.toys.ACB.handler;
+package com.toys.ACB.component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toys.ACB.response.Result;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

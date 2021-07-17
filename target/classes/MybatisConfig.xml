@@ -17,16 +17,22 @@
         <package name="com.toys.ACB.entity"/>
     </typeAliases>
 
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
+    </plugins>
+
     <!-- 配置环境：可以有多个 -->
     <environments default="development">
         <environment id="development">
             <!-- 使用jdbc事务管理 -->
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="${spring.datasource.driver-class-name}" />
-                <property name="url" value="${spring.datasource.url}" />
-                <property name="username" value="${spring.datasource.username}" />
-                <property name="password" value="${spring.datasource.password}" />
+                <property name="driver" value="${jdbc.driver-class-name}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
             </dataSource>
         </environment>
     </environments>
@@ -35,5 +41,6 @@
     <mappers>
         <package name="com.toys.ACB.mapper"/>
     </mappers>
+
 
 </configuration>

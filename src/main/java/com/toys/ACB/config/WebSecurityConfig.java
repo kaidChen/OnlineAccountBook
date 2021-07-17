@@ -1,6 +1,6 @@
 package com.toys.ACB.config;
 
-import com.toys.ACB.handler.*;
+import com.toys.ACB.component.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -45,9 +45,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private MyInvalidSessionStrategy myInvalidSessionStrategy;
-
-    @Autowired
-    private MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

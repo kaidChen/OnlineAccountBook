@@ -25,4 +25,6 @@ public interface UserService {
     int deleteType(Long tid, Long userId) throws Exception;
 
     int updateNickname(String nickname, Long userId) throws Exception;
+
+    int updatePassword(String username, String password) throws Exception;
 }

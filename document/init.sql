@@ -12,7 +12,7 @@ CREATE TABLE bill
     type_id BIGINT UNSIGNED NOT NULL,
     user_id BIGINT UNSIGNED NOT NULL,
     cycle   BIGINT UNSIGNED NOT NULL,
-    source  INT UNSIGNED    NOT NULL DEFAULT 0 COMMENT '来源 收入支出:1，存款支出:2',
+    source  INT UNSIGNED    NOT NULL DEFAULT 0 COMMENT '来源 现金支出:0，借款支出:1',
     primary key (id),
     INDEX type_id_idx (type_id ASC) VISIBLE,
     INDEX user_cycle_idx (user_id, cycle ASC) VISIBLE
@@ -23,12 +23,11 @@ CREATE TABLE type
 (
     id      BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     name    VARCHAR(16)     NOT NULL,
-    kind    INT UNSIGNED    NOT NULL DEFAULT 0 COMMENT '支出：0，收入：1，存款：2',
+    kind    INT UNSIGNED    NOT NULL DEFAULT 0 COMMENT '支出：0，收入：1',
     user_id BIGINT UNSIGNED NOT NULL,
     status  INT UNSIGNED    NOT NULL DEFAULT 1 COMMENT '不可见：0，可见1',
     PRIMARY KEY (id),
-    UNIQUE INDEX name_idx (name),
-    INDEX user_idx (user_id) VISIBLE
+    UNIQUE INDEX name_idx (user_id, name) VISIBLE
 );
 
 DROP TABLE IF EXISTS sys_user;
