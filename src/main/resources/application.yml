@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/account_book?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 12358
+  servlet:
+    session:
+      timeout: 600
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+security:
+  ignored:
+    urls: #安全路径白名单
+      - /logout
+      - /swagger
+      - /druid
+
