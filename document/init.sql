@@ -23,7 +23,7 @@ CREATE TABLE type
 (
     id      BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     name    VARCHAR(16)     NOT NULL,
-    kind    INT UNSIGNED    NOT NULL DEFAULT 0 COMMENT '支出：0，收入：1',
+    kind    INT UNSIGNED    NOT NULL DEFAULT 0 COMMENT '消费：0，收入：1，存储：2，理财：3',
     user_id BIGINT UNSIGNED NOT NULL,
     status  INT UNSIGNED    NOT NULL DEFAULT 1 COMMENT '不可见：0，可见1',
     PRIMARY KEY (id),

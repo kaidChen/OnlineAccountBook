@@ -7,13 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ACB" />
+        <module name="acb_mbg" />
+        <module name="acb_business" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ACB" options="-parameters" />
+      <module name="ACB" options="" />
+      <module name="acb_business" options="-parameters" />
+      <module name="acb_mbg" options="-parameters" />
     </option>
   </component>
 </project>
