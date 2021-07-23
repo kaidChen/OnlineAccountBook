@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>acb_business</module>
+        <module>acb_user</module>
         <module>acb_mbg</module>
     </modules>
 
@@ -67,7 +67,7 @@
             </dependency>
             <dependency>
                 <groupId>org.toys</groupId>
-                <artifactId>acb_business</artifactId>
+                <artifactId>acb_user</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 

@@ -4,76 +4,76 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 public class Type implements Serializable {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3987564+08:00", comments="Source field: type.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.id")
     private Long id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.name")
     private String name;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.kind")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.kind")
     private Integer kind;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.user_id")
     private Long userId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source field: type.status")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.status")
     private Integer status;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source Table: type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: type")
     private static final long serialVersionUID = 1L;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3987564+08:00", comments="Source field: type.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.id")
     public Long getId() {
         return id;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.id")
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.name")
     public String getName() {
         return name;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.name")
     public void setName(String name) {
         this.name = name;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.kind")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.kind")
     public Integer getKind() {
         return kind;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.kind")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.kind")
     public void setKind(Integer kind) {
         this.kind = kind;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.user_id")
     public Long getUserId() {
         return userId;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3997537+08:00", comments="Source field: type.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.user_id")
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source field: type.status")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.status")
     public Integer getStatus() {
         return status;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source field: type.status")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source field: type.status")
     public void setStatus(Integer status) {
         this.status = status;
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source Table: type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: type")
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
@@ -90,7 +90,7 @@ public class Type implements Serializable {
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source Table: type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: type")
     public boolean equals(Object that) {
         if (this == that) {
             return true;
@@ -110,7 +110,7 @@ public class Type implements Serializable {
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.4007534+08:00", comments="Source Table: type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: type")
     public int hashCode() {
         final int prime = 31;
         int result = 1;

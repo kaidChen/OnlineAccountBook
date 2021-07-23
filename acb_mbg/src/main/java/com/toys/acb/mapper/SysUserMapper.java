@@ -33,28 +33,28 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
 public interface SysUserMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     BasicColumn[] selectList = BasicColumn.columnList(id, username, nickname, password, status, cycle);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3937698+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3947669+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3947669+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT LAST_INSERT_ID()", keyProperty="record.id", before=false, resultType=Long.class)
     int insert(InsertStatementProvider<SysUser> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3947669+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SysUserResult")
     Optional<SysUser> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3947669+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SysUserResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
@@ -66,28 +66,28 @@ public interface SysUserMapper {
     })
     List<SysUser> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3947669+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3957643+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, sysUser, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3957643+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, sysUser, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3957643+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int deleteByPrimaryKey(Long id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3957643+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int insert(SysUser record) {
         return MyBatis3Utils.insert(this::insert, record, sysUser, c ->
             c.map(username).toProperty("username")
@@ -98,7 +98,7 @@ public interface SysUserMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3957643+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int insertSelective(SysUser record) {
         return MyBatis3Utils.insert(this::insert, record, sysUser, c ->
             c.map(username).toPropertyWhenPresent("username", record::getUsername)
@@ -109,34 +109,34 @@ public interface SysUserMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default Optional<SysUser> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, sysUser, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default List<SysUser> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, sysUser, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default List<SysUser> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, sysUser, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default Optional<SysUser> selectByPrimaryKey(Long id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, sysUser, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     static UpdateDSL<UpdateModel> updateAllColumns(SysUser record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(username).equalTo(record::getUsername)
                 .set(nickname).equalTo(record::getNickname)
@@ -145,7 +145,7 @@ public interface SysUserMapper {
                 .set(cycle).equalTo(record::getCycle);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3967617+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(SysUser record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(username).equalToWhenPresent(record::getUsername)
                 .set(nickname).equalToWhenPresent(record::getNickname)
@@ -154,7 +154,7 @@ public interface SysUserMapper {
                 .set(cycle).equalToWhenPresent(record::getCycle);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3977595+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int updateByPrimaryKey(SysUser record) {
         return update(c ->
             c.set(username).equalTo(record::getUsername)
@@ -166,7 +166,7 @@ public interface SysUserMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3977595+08:00", comments="Source Table: sys_user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1315296+08:00", comments="Source Table: sys_user")
     default int updateByPrimaryKeySelective(SysUser record) {
         return update(c ->
             c.set(username).equalToWhenPresent(record::getUsername)

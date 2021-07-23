@@ -4,50 +4,50 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 public class SysRole implements Serializable {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2784725+08:00", comments="Source field: sys_role.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.id")
     private Long id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2814641+08:00", comments="Source field: sys_role.code")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.code")
     private String code;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2964235+08:00", comments="Source field: sys_role.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.name")
     private String name;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2964235+08:00", comments="Source Table: sys_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source Table: sys_role")
     private static final long serialVersionUID = 1L;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2804663+08:00", comments="Source field: sys_role.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.id")
     public Long getId() {
         return id;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2814641+08:00", comments="Source field: sys_role.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.id")
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2814641+08:00", comments="Source field: sys_role.code")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.code")
     public String getCode() {
         return code;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2934313+08:00", comments="Source field: sys_role.code")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.code")
     public void setCode(String code) {
         this.code = code;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2964235+08:00", comments="Source field: sys_role.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.name")
     public String getName() {
         return name;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2964235+08:00", comments="Source field: sys_role.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source field: sys_role.name")
     public void setName(String name) {
         this.name = name;
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2964235+08:00", comments="Source Table: sys_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source Table: sys_role")
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
@@ -62,7 +62,7 @@ public class SysRole implements Serializable {
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2964235+08:00", comments="Source Table: sys_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source Table: sys_role")
     public boolean equals(Object that) {
         if (this == that) {
             return true;
@@ -80,7 +80,7 @@ public class SysRole implements Serializable {
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.2974211+08:00", comments="Source Table: sys_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.0846654+08:00", comments="Source Table: sys_role")
     public int hashCode() {
         final int prime = 31;
         int result = 1;

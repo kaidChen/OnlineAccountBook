@@ -4,37 +4,37 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 public class SysUserRole implements Serializable {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3768158+08:00", comments="Source field: sys_user_role.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source field: sys_user_role.user_id")
     private Long userId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source field: sys_user_role.role_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source field: sys_user_role.role_id")
     private Long roleId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source Table: sys_user_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source Table: sys_user_role")
     private static final long serialVersionUID = 1L;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3768158+08:00", comments="Source field: sys_user_role.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source field: sys_user_role.user_id")
     public Long getUserId() {
         return userId;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source field: sys_user_role.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source field: sys_user_role.user_id")
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source field: sys_user_role.role_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source field: sys_user_role.role_id")
     public Long getRoleId() {
         return roleId;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source field: sys_user_role.role_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source field: sys_user_role.role_id")
     public void setRoleId(Long roleId) {
         this.roleId = roleId;
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source Table: sys_user_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source Table: sys_user_role")
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
@@ -48,7 +48,7 @@ public class SysUserRole implements Serializable {
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source Table: sys_user_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source Table: sys_user_role")
     public boolean equals(Object that) {
         if (this == that) {
             return true;
@@ -65,7 +65,7 @@ public class SysUserRole implements Serializable {
     }
 
     @Override
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-21T21:12:45.3778134+08:00", comments="Source Table: sys_user_role")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-07-23T09:57:40.1159104+08:00", comments="Source Table: sys_user_role")
     public int hashCode() {
         final int prime = 31;
         int result = 1;
