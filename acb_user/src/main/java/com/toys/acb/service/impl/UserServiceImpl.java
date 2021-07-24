@@ -1,6 +1,5 @@
 package com.toys.acb.service.impl;
 
-import com.github.pagehelper.PageHelper;
 import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.constant.DbCode;
 import com.toys.acb.entity.Bill;
@@ -48,7 +47,7 @@ public class UserServiceImpl implements UserService {
 
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
-            PageHelper.startPage(page, size);
+//            PageHelper.startPage(page, size);
             return billDetailMapper.selectMany(selectStatementProvider);
         } catch (Exception e) {
             LOGGER.error("error at getAllBillList: {}", e.getMessage());
