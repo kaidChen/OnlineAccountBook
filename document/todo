@@ -1,4 +1,5 @@
 1. 完善AuthController以及AuthService的功能
 2. 为接口添加redis缓存功能
 3. 实现避免重复登陆
+4. 提供数据计算服务
 4. 页面设计

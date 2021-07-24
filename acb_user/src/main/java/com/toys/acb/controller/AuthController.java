@@ -3,8 +3,11 @@ package com.toys.acb.controller;
 import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.LoginForm;
 import com.toys.acb.dto.Result;
+import com.toys.acb.entity.SysUser;
 import com.toys.acb.service.AuthService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,6 +36,7 @@ public class AuthController {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @ApiOperation("用户登录")
     @PostMapping("/login")
     public Result login(@RequestBody @Valid LoginForm loginForm){
         String username = loginForm.getUsername();
@@ -60,8 +65,24 @@ public class AuthController {
         return Result.ok();
     }
 
-    @PostMapping("/signup")
-    public Result signup() {
-        return Result.error();
-    }
+//    @ApiOperation("注册账号")
+//    @PreAuthorize("hasAnyRole('admin')")
+//    @PostMapping("/signup")
+//    public Result signup(@RequestBody SysUser sysUser) {
+//
+//    }
+//
+//    @ApiOperation("修改自己的密码")
+//    @PreAuthorize("hasAnyRole('admin', 'user')")
+//    @PostMapping("update_pw")
+//    public Result updatePassword() {
+//
+//    }
+//
+//    @ApiOperation("管理员修改用户的密码")
+//    @PreAuthorize("hasAnyRole('admin')")
+//    @PostMapping("/update_userpw")
+//    public Result updateUserPassword() {
+//
+//    }
 }

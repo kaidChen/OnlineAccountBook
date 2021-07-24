@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@ComponentScan("com.toys.ACB.controller")
+@ComponentScan("com.toys.acb.controller")
 public class Swagger2Config {
     @Bean
     public Docket createRestApi() {
@@ -22,16 +22,16 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .enable(true)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.toys.ACB.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.toys.acb.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Mall SwaggerUI")
+                .title("Account Book SwaggerUI")
                 .description("RestFul interface of Controller")
-                .contact(new Contact("contact me", "www.baidu.com", "email@163.com"))
+                .contact(new Contact("chenkaidong", "www.pornhub.com", "email@163.com"))
                 .version("1.0")
                 .build();
     }

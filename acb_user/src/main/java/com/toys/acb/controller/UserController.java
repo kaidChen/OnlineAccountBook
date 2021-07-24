@@ -7,6 +7,7 @@ import com.toys.acb.dto.Result;
 import com.toys.acb.entity.Bill;
 import com.toys.acb.entity.Type;
 import com.toys.acb.service.UserService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("获取用户当前周预算周期的所有账单")
+    @PreAuthorize("hasAnyRole('user')")
     @GetMapping("/bill/list")
     public Result getBillList(@RequestParam(value = "page", defaultValue = "1") Integer page,
                               @RequestParam(value = "size", defaultValue = "10") Integer size) {
@@ -38,7 +40,8 @@ public class UserController {
         return Result.ok().addDate("page_info", billPage);
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("获取用户指定周期的所有账单")
+    @PreAuthorize("hasAnyRole('user')")
     @GetMapping("/bill/cycle_list")
     public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "1") Integer page,
                                      @RequestParam(value = "size", defaultValue = "10") Integer size,
@@ -54,7 +57,8 @@ public class UserController {
         return Result.ok().addDate("page_info", billPage);
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("添加账单")
+    @PreAuthorize("hasAnyRole('user')")
     @PostMapping("/bill")
     public Result addBill(@RequestBody Bill bill) {
         Long userId = (Long) request.getSession().getAttribute("userId");
@@ -69,7 +73,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("更新账单")
+    @PreAuthorize("hasAnyRole('user')")
     @PutMapping("bill")
     public Result updateBill(@RequestBody Bill bill) {
         Long userId = (Long) request.getSession().getAttribute("userId");
@@ -84,7 +89,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("删除账单")
+    @PreAuthorize("hasAnyRole('user')")
     @DeleteMapping("/bill")
     public Result deleteBill(@RequestParam("id") Long id) {
         Long userId = (Long) request.getSession().getAttribute("userId");
@@ -98,7 +104,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("获取账单类型列表")
+    @PreAuthorize("hasAnyRole('user')")
     @GetMapping("/type/list")
     public Result getTypeList() {
         Long userId = (Long) request.getSession().getAttribute("userId");
@@ -109,7 +116,8 @@ public class UserController {
         return Result.ok().addDate("type_list", allTypes);
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("添加账单类型")
+    @PreAuthorize("hasAnyRole('user')")
     @PostMapping("/type")
     public Result addType(@RequestBody Type type) {
         Long userId = (Long) request.getSession().getAttribute("userId");
@@ -124,7 +132,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("更新账单类型")
+    @PreAuthorize("hasAnyRole('user')")
     @PutMapping("/type")
     public Result updateType(@RequestBody Type type) {
         Long userId = (Long) request.getSession().getAttribute("userId");
@@ -139,7 +148,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PreAuthorize("hasRole('user')")
+    @ApiOperation("删除账单类型")
+    @PreAuthorize("hasAnyRole('user')")
     @DeleteMapping("/type")
     public Result deleteType(@RequestParam("id") Long id) {
         Long userId = (Long) request.getSession().getAttribute("userId");
