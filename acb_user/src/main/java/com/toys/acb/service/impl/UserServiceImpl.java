@@ -1,5 +1,6 @@
 package com.toys.acb.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.constant.DbCode;
 import com.toys.acb.entity.Bill;
@@ -38,17 +39,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public SysUser getUserByUsername(String username) {
+        SelectStatementProvider render = select(sysUser.cycle, sysUser.nickname)
+                .from(sysUser)
+                .where(sysUser.username, isEqualTo(username))
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-
-            Optional<SysUser> sysUserOptional = sysUserMapper.selectOne(
-                    select(sysUser.cycle, sysUser.nickname)
-                            .from(sysUser)
-                            .where(sysUser.username, isEqualTo(username))
-                            .build()
-                            .render(RenderingStrategies.MYBATIS3)
-            );
-
+            Optional<SysUser> sysUserOptional = sysUserMapper.selectOne(render);
             return sysUserOptional.orElse(null);
         } catch (Exception e) {
             LOGGER.error("error at getUserByUsername: {}", e.getMessage());
@@ -57,24 +56,51 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<BillDetail> getAllBillList(Integer page, Integer size, Long userId) {
+    public List<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId) {
         SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
                 .from(bill)
                 .leftJoin(type)
                 .on(bill.typeId, equalTo(type.id))
-                .where(bill.userId, isEqualTo(userId))
+                .leftJoin(sysUser)
+                .on(bill.userId, equalTo(sysUser.id))
+                .where(bill.userId, isEqualTo(userId),
+                        and(bill.cycle, isEqualTo(sysUser.cycle)))
                 .orderBy(bill.time.descending())
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
-//            PageHelper.startPage(page, size);
+            PageHelper.startPage(page, size);
             List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
-            LOGGER.info("getAllBillList: page={}, size={}, userId={}", page, size, userId);
+            LOGGER.info("getCurrentBillList: page={}, size={}, userId={}", page, size, userId);
             return billDetailList;
         } catch (Exception e) {
-            LOGGER.error("error at getAllBillList: {}", e.getMessage());
+            LOGGER.error("error at getCurrentBillList: {}", e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public List<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId) {
+        SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
+                .from(bill)
+                .leftJoin(type)
+                .on(bill.typeId, equalTo(type.id))
+                .where(bill.userId, isEqualTo(userId),
+                        and(bill.cycle, isEqualTo(cycle)))
+                .orderBy(bill.time.descending())
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
+            PageHelper.startPage(page, size);
+            List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
+            LOGGER.info("getBillListByCycle: page={}, size={}, cycle={}, userId={}", page, size, cycle, userId);
+            return billDetailList;
+        } catch (Exception e) {
+            LOGGER.error("error at getBillListByCycle: {}", e.getMessage());
         }
         return null;
     }
@@ -139,7 +165,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Type> getAllTypes(Long userId) {
+    public List<Type> getTypeList(Long userId) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             TypeMapper typeMapper = sqlSession.getMapper(TypeMapper.class);
             List<Type> typeList = typeMapper.selectMany(
@@ -150,10 +176,10 @@ public class UserServiceImpl implements UserService {
                             .build()
                             .render(RenderingStrategies.MYBATIS3)
             );
-            LOGGER.info("getAllType, userId={}", userId);
+            LOGGER.info("getTypeList, userId={}", userId);
             return typeList;
         } catch (Exception e) {
-            LOGGER.error("error at getAllTypes: {}", e.getMessage());
+            LOGGER.error("error at getTypeList: {}", e.getMessage());
         }
         return null;
     }

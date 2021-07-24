@@ -10,7 +10,9 @@ import java.util.List;
 public interface UserService {
     SysUser getUserByUsername(String username);
 
-    List<BillDetail> getAllBillList(Integer page, Integer size, Long userId);
+    List<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId);
+
+    List<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId);
 
     int addBill(Bill bill);
 
@@ -18,7 +20,7 @@ public interface UserService {
 
     int deleteBill(Long bid, Long userId);
 
-    List<Type> getAllTypes(Long userId);
+    List<Type> getTypeList(Long userId);
 
     int addType(Type type);
 

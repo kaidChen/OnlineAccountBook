@@ -3,7 +3,8 @@ package com.toys.acb.controller;
 import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.BillDetail;
 import com.toys.acb.dto.Result;
-import com.toys.acb.entity.*;
+import com.toys.acb.entity.Bill;
+import com.toys.acb.entity.Type;
 import com.toys.acb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,7 +24,7 @@ public class UserController {
 
     @PreAuthorize("hasRole('user')")
     @GetMapping("/bill/list")
-    public Result getBillList(@RequestParam(value = "page", defaultValue = "1") Integer page,
+    public Result getBillList(@RequestParam(value = "page", defaultValue = "0") Integer page,
                               @RequestParam(value = "size", defaultValue = "10") Integer size) {
         if (page <= 0 || size <= 0 || size > 50) {
             return Result.error(ResultCode.PARAM_NOT_VALID);
@@ -32,7 +33,23 @@ public class UserController {
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        List<BillDetail> allBillList = userService.getAllBillList(page, size, userId);
+        List<BillDetail> allBillList = userService.getCurrentBillList(page, size, userId);
+        return Result.ok().addDate("bill_list", allBillList);
+    }
+
+    @PreAuthorize("hasRole('user')")
+    @GetMapping("/bill/cycle_list")
+    public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "0") Integer page,
+                                     @RequestParam(value = "size", defaultValue = "10") Integer size,
+                                     @RequestParam("cycle") Long cycle) {
+        if (page <= 0 || size <= 0 || size > 50 || cycle <= 0) {
+            return Result.error(ResultCode.PARAM_NOT_VALID);
+        }
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
+            return Result.error(ResultCode.USER_NOT_LOGIN);
+        }
+        List<BillDetail> allBillList = userService.getBillListByCycle(page, size, cycle, userId);
         return Result.ok().addDate("bill_list", allBillList);
     }
 
@@ -87,7 +104,7 @@ public class UserController {
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        List<Type> allTypes = userService.getAllTypes(userId);
+        List<Type> allTypes = userService.getTypeList(userId);
         return Result.ok().addDate("type_list", allTypes);
     }
 
