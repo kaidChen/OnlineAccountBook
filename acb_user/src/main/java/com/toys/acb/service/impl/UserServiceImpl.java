@@ -1,6 +1,7 @@
 package com.toys.acb.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.constant.DbCode;
 import com.toys.acb.entity.Bill;
@@ -56,7 +57,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId) {
+    public PageInfo<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId) {
         SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
                 .from(bill)
                 .leftJoin(type)
@@ -74,7 +75,7 @@ public class UserServiceImpl implements UserService {
             PageHelper.startPage(page, size);
             List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
             LOGGER.info("getCurrentBillList: page={}, size={}, userId={}", page, size, userId);
-            return billDetailList;
+            return new PageInfo<>(billDetailList);
         } catch (Exception e) {
             LOGGER.error("error at getCurrentBillList: {}", e.getMessage());
         }
@@ -82,7 +83,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId) {
+    public PageInfo<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId) {
         SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
                 .from(bill)
                 .leftJoin(type)
@@ -98,7 +99,7 @@ public class UserServiceImpl implements UserService {
             PageHelper.startPage(page, size);
             List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
             LOGGER.info("getBillListByCycle: page={}, size={}, cycle={}, userId={}", page, size, cycle, userId);
-            return billDetailList;
+            return new PageInfo<>(billDetailList);
         } catch (Exception e) {
             LOGGER.error("error at getBillListByCycle: {}", e.getMessage());
         }

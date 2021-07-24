@@ -1,5 +1,6 @@
 package com.toys.acb.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.BillDetail;
 import com.toys.acb.dto.Result;
@@ -24,7 +25,7 @@ public class UserController {
 
     @PreAuthorize("hasRole('user')")
     @GetMapping("/bill/list")
-    public Result getBillList(@RequestParam(value = "page", defaultValue = "0") Integer page,
+    public Result getBillList(@RequestParam(value = "page", defaultValue = "1") Integer page,
                               @RequestParam(value = "size", defaultValue = "10") Integer size) {
         if (page <= 0 || size <= 0 || size > 50) {
             return Result.error(ResultCode.PARAM_NOT_VALID);
@@ -33,13 +34,13 @@ public class UserController {
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        List<BillDetail> allBillList = userService.getCurrentBillList(page, size, userId);
-        return Result.ok().addDate("bill_list", allBillList);
+        PageInfo<BillDetail> billPage = userService.getCurrentBillList(page, size, userId);
+        return Result.ok().addDate("page_info", billPage);
     }
 
     @PreAuthorize("hasRole('user')")
     @GetMapping("/bill/cycle_list")
-    public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "0") Integer page,
+    public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "1") Integer page,
                                      @RequestParam(value = "size", defaultValue = "10") Integer size,
                                      @RequestParam("cycle") Long cycle) {
         if (page <= 0 || size <= 0 || size > 50 || cycle <= 0) {
@@ -49,8 +50,8 @@ public class UserController {
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        List<BillDetail> allBillList = userService.getBillListByCycle(page, size, cycle, userId);
-        return Result.ok().addDate("bill_list", allBillList);
+        PageInfo<BillDetail> billPage = userService.getBillListByCycle(page, size, cycle, userId);
+        return Result.ok().addDate("page_info", billPage);
     }
 
     @PreAuthorize("hasRole('user')")
