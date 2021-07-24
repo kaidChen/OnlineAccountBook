@@ -1,6 +1,5 @@
 package com.toys.acb.service;
 
-import com.toys.acb.dto.LoginRes;
 import com.toys.acb.entity.SysUser;
 
 public interface AuthService {

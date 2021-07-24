@@ -1,8 +1,6 @@
 package com.toys.acb.service.impl;
 
 import com.toys.acb.component.SqlSessionBuilder;
-import com.toys.acb.constant.ResultCode;
-import com.toys.acb.dto.LoginRes;
 import com.toys.acb.entity.SysUser;
 import com.toys.acb.mapper.SysUserMapper;
 import com.toys.acb.service.AuthService;
@@ -11,8 +9,6 @@ import org.mybatis.dynamic.sql.render.RenderingStrategies;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

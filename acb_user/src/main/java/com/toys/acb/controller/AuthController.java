@@ -2,12 +2,8 @@ package com.toys.acb.controller;
 
 import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.LoginForm;
-import com.toys.acb.dto.LoginRes;
 import com.toys.acb.dto.Result;
-import com.toys.acb.entity.SysUser;
 import com.toys.acb.service.AuthService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
