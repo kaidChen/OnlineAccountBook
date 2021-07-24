@@ -54,14 +54,12 @@ public class AuthController {
             return Result.error(ResultCode.USER_ACCOUNT_LOCKED);
         }
 
-        SysUser user = authService.login(username);
-        if (user == null) {
+        Long userId = authService.login(username);
+        if (userId == null) {
             return Result.error(ResultCode.USER_ACCOUNT_NOT_EXIST);
         }
 
-        request.getSession().setAttribute("user", user);
-
-        user.setId(null);
+        request.getSession().setAttribute("userId", userId);
 
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));

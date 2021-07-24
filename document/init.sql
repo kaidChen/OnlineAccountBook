@@ -68,4 +68,5 @@ VALUES (1, 'ROLE_admin', '管理员'),
        (2, 'ROLE_user', '用户');
 INSERT INTO sys_user_role(user_id, role_id)
 VALUES (1, 1),
+       (1, 2),
        (2, 2);

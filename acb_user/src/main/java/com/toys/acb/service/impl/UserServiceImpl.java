@@ -4,6 +4,7 @@ import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.constant.DbCode;
 import com.toys.acb.entity.Bill;
 import com.toys.acb.dto.BillDetail;
+import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
 import com.toys.acb.mapper.BillDetailMapper;
 import com.toys.acb.mapper.BillMapper;
@@ -21,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import static com.toys.acb.mapper.BillDynamicSqlSupport.bill;
 import static com.toys.acb.mapper.TypeDynamicSqlSupport.type;
@@ -33,6 +35,26 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private SqlSessionBuilder sqlSessionBuilder;
+
+    @Override
+    public SysUser getUserByUsername(String username) {
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
+
+            Optional<SysUser> sysUserOptional = sysUserMapper.selectOne(
+                    select(sysUser.cycle, sysUser.nickname)
+                            .from(sysUser)
+                            .where(sysUser.username, isEqualTo(username))
+                            .build()
+                            .render(RenderingStrategies.MYBATIS3)
+            );
+
+            return sysUserOptional.orElse(null);
+        } catch (Exception e) {
+            LOGGER.error("error at getUserByUsername: {}", e.getMessage());
+        }
+        return null;
+    }
 
     @Override
     public List<BillDetail> getAllBillList(Integer page, Integer size, Long userId) {
@@ -48,7 +70,9 @@ public class UserServiceImpl implements UserService {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
 //            PageHelper.startPage(page, size);
-            return billDetailMapper.selectMany(selectStatementProvider);
+            List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
+            LOGGER.info("getAllBillList: page={}, size={}, userId={}", page, size, userId);
+            return billDetailList;
         } catch (Exception e) {
             LOGGER.error("error at getAllBillList: {}", e.getMessage());
         }

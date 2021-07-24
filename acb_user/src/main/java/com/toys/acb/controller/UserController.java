@@ -21,20 +21,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    private SysUser getUser() {
-        return (SysUser) request.getSession().getAttribute("user");
-    }
-
-    @PreAuthorize("hasRole('user')")
-    @GetMapping("/test")
-    public SysUser test() {
-//        String username = (String) request.getSession().getAttribute("username");
-//        String password = (String) request.getSession().getAttribute("password");
-//        return username + ": " + password;
-
-        return getUser();
-    }
-
     @PreAuthorize("hasRole('user')")
     @GetMapping("/bill/list")
     public Result getBillList(@RequestParam(value = "page", defaultValue = "1") Integer page,
@@ -42,56 +28,52 @@ public class UserController {
         if (page <= 0 || size <= 0 || size > 50) {
             return Result.error(ResultCode.PARAM_NOT_VALID);
         }
-
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        List<BillDetail> allBillList = userService.getAllBillList(page, size, sysUser.getId());
+        List<BillDetail> allBillList = userService.getAllBillList(page, size, userId);
         return Result.ok().addDate("bill_list", allBillList);
     }
 
     @PreAuthorize("hasRole('user')")
     @PostMapping("/bill")
     public Result addBill(@RequestBody Bill bill) {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        bill.setUserId(sysUser.getId());
+        bill.setUserId(userId);
         int rows = userService.addBill(bill);
         if (rows < 0) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
-
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
     @PreAuthorize("hasRole('user')")
     @PutMapping("bill")
     public Result updateBill(@RequestBody Bill bill) {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        bill.setUserId(sysUser.getId());
+        bill.setUserId(userId);
         int rows = userService.updateBill(bill);
         if (rows < 0) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
-
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
     @PreAuthorize("hasRole('user')")
     @DeleteMapping("/bill")
     public Result deleteBill(@RequestParam("id") Long id) {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-
-        int rows = userService.deleteBill(id, sysUser.getId());
+        int rows = userService.deleteBill(id, userId);
         if (rows < 0) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
@@ -101,22 +83,22 @@ public class UserController {
     @PreAuthorize("hasRole('user')")
     @GetMapping("/type/list")
     public Result getTypeList() {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        List<Type> allTypes = userService.getAllTypes(sysUser.getId());
+        List<Type> allTypes = userService.getAllTypes(userId);
         return Result.ok().addDate("type_list", allTypes);
     }
 
     @PreAuthorize("hasRole('user')")
     @PostMapping("/type")
     public Result addType(@RequestBody Type type) {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        type.setUserId(sysUser.getId());
+        type.setUserId(userId);
         int rows = userService.addType(type);
         if (rows < 0) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
@@ -127,11 +109,11 @@ public class UserController {
     @PreAuthorize("hasRole('user')")
     @PutMapping("/type")
     public Result updateType(@RequestBody Type type) {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        type.setUserId(sysUser.getId());
+        type.setUserId(userId);
         int rows = userService.updateType(type);
         if (rows < 0) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
@@ -142,12 +124,11 @@ public class UserController {
     @PreAuthorize("hasRole('user')")
     @DeleteMapping("/type")
     public Result deleteType(@RequestParam("id") Long id) {
-        SysUser sysUser = getUser();
-        if (sysUser == null) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-
-        int rows = userService.deleteType(id, sysUser.getId());
+        int rows = userService.deleteType(id, userId);
         if (rows < 0) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }

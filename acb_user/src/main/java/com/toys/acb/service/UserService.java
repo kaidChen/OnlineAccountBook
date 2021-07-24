@@ -2,11 +2,14 @@ package com.toys.acb.service;
 
 import com.toys.acb.entity.Bill;
 import com.toys.acb.dto.BillDetail;
+import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
 
 import java.util.List;
 
 public interface UserService {
+    SysUser getUserByUsername(String username);
+
     List<BillDetail> getAllBillList(Integer page, Integer size, Long userId);
 
     int addBill(Bill bill);

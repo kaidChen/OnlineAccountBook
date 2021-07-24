@@ -29,25 +29,31 @@ public class AuthServiceImpl implements AuthService {
     private SqlSessionBuilder sqlSessionBuilder;
 
     @Override
-    public int signup(SysUser sysUser) {
+    public Integer signup(SysUser sysUser) {
         return 0;
     }
 
     @Override
-    public SysUser login(String username) {
+    public Long login(String username) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
 
             Optional<SysUser> sysUserOptional = sysUserMapper.selectOne(
-                    select(sysUser.id, sysUser.username, sysUser.cycle, sysUser.nickname)
+                    select(sysUser.id)
                             .from(sysUser)
                             .where(sysUser.username, isEqualTo(username))
                             .build()
                             .render(RenderingStrategies.MYBATIS3)
             );
 
+            SysUser user = sysUserOptional.orElse(null);
+            if (user == null) {
+                LOGGER.info("用户不存在：{}", username);
+                return null;
+            }
+
             LOGGER.info("用户登录成功：username={}", username);
-            return sysUserOptional.orElse(null);
+            return user.getId();
         } catch (Exception e) {
             LOGGER.error("error at login: username={}, err:{}", username, e.getMessage());
         }
@@ -55,12 +61,12 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public int updatePassword(String oldPW, String newPW, Long userId) {
+    public Integer updatePassword(String oldPW, String newPW, Long userId) {
         return 0;
     }
 
     @Override
-    public int updateUserPassword(String username, String password) {
+    public Integer updateUserPassword(String username, String password) {
         return 0;
     }
 }

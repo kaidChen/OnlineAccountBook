@@ -1,0 +1,1352 @@
+11:47:39.723 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+11:47:39.728 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10884 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+11:47:39.728 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+11:47:41.080 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:47:41.080 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:47:41.118 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+11:47:41.880 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+11:47:41.904 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+11:47:41.904 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:47:41.904 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+11:47:42.035 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:47:42.035 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2224 ms
+11:47:43.701 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:47:45.065 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:47:45.172 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+11:47:45.210 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+11:47:45.326 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 6.318 seconds (JVM running for 10.126)
+11:48:01.153 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:48:01.153 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:48:01.153 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+11:49:50.125 [http-nio-12358-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+11:51:08.299 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+11:51:08.307 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 11132 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+11:51:08.308 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+11:51:09.418 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:51:09.420 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:51:09.449 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+11:51:10.028 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+11:51:10.045 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+11:51:10.046 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:51:10.046 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+11:51:10.169 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:51:10.170 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1787 ms
+11:51:11.148 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:51:11.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:51:11.521 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+11:51:11.543 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+11:51:11.642 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 3.968 seconds (JVM running for 6.043)
+11:51:22.690 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:51:22.690 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:51:22.691 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+11:55:30.095 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+11:55:30.100 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 4236 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+11:55:30.100 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+11:55:31.993 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:55:31.994 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:55:32.024 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+11:55:32.653 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+11:55:32.661 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+11:55:32.661 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:55:32.662 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+11:55:32.775 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:55:32.775 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2612 ms
+11:55:35.050 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:55:35.313 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:55:35.409 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+11:55:35.434 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+11:55:35.509 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 6.741 seconds (JVM running for 8.587)
+11:55:56.891 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:55:56.891 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:55:56.892 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:06:19.888 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 11764 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:06:19.888 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:06:19.898 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:06:21.251 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:06:21.255 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:06:21.295 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+12:06:21.944 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:06:21.951 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:06:21.951 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:06:21.951 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:06:22.057 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:06:22.058 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2085 ms
+12:06:23.187 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:06:23.469 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:06:23.567 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:06:23.589 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:06:23.665 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.562 seconds (JVM running for 6.733)
+12:11:13.926 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:11:13.927 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 784 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:11:13.930 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:11:15.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:11:15.033 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:11:15.066 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+12:11:15.584 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:11:15.592 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:11:15.592 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:11:15.592 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:11:15.717 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:11:15.717 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1716 ms
+12:11:16.950 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:11:17.234 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:11:17.344 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:11:17.372 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:11:17.432 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.337 seconds (JVM running for 5.704)
+12:19:08.211 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:19:08.224 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 892 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:19:08.225 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:19:09.478 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:19:09.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:19:09.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+12:19:10.098 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:19:10.106 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:19:10.107 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:19:10.107 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:19:10.214 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:19:10.214 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1917 ms
+12:19:11.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:19:11.724 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:19:11.830 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:19:11.869 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:19:11.956 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.612 seconds (JVM running for 6.405)
+12:19:16.263 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:19:16.263 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:19:16.264 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:19:16.446 [http-nio-12358-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:19:43.933 [http-nio-12358-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] [Field error in object 'loginForm' on field 'password': rejected value [123456]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] ]
+12:21:13.374 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 1200 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:21:13.377 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:21:13.393 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:21:14.486 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:21:14.488 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:21:14.510 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+12:21:15.031 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:21:15.038 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:21:15.039 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:21:15.039 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:21:15.141 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:21:15.142 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1695 ms
+12:21:16.138 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:21:16.380 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:21:16.478 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:21:16.500 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:21:16.563 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 3.901 seconds (JVM running for 5.473)
+12:21:27.091 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:21:27.091 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:21:27.092 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:21:36.822 [http-nio-12358-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:21:44.195 [http-nio-12358-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:22:05.571 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 13040 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:22:05.575 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:22:05.582 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:22:06.616 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:22:06.619 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:22:06.673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+12:22:07.230 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:22:07.238 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:22:07.239 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:22:07.239 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:22:07.356 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:22:07.356 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1712 ms
+12:22:08.713 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:22:08.975 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:22:09.078 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:22:09.100 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:22:09.163 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.243 seconds (JVM running for 6.038)
+12:22:44.670 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:22:44.670 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:22:44.671 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:22:44.819 [http-nio-12358-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123456]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:22:58.778 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:22:58.802 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 4888 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:22:58.803 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:22:59.879 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:22:59.881 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:22:59.915 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+12:23:00.485 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:23:00.495 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:23:00.496 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:23:00.496 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:23:00.607 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:23:00.607 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1728 ms
+12:23:01.641 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:23:01.900 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:23:01.997 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:23:02.030 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:23:02.085 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.05 seconds (JVM running for 5.611)
+12:23:18.188 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:23:18.189 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:23:18.190 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:23:18.363 [http-nio-12358-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:24:35.662 [http-nio-12358-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:25:19.459 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12028 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:25:19.461 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:25:19.483 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:25:20.935 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:25:20.938 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:25:20.980 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+12:25:21.758 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:25:21.769 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:25:21.769 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:25:21.770 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:25:21.931 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:25:21.932 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2397 ms
+12:25:23.441 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:25:23.850 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:25:24.017 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:25:24.046 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:25:24.126 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.132 seconds (JVM running for 7.133)
+12:25:27.801 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:25:27.801 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:25:27.803 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:25:27.969 [http-nio-12358-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:25:36.617 [http-nio-12358-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:25:44.220 [http-nio-12358-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [admin]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:27:18.741 [http-nio-12358-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm) with 2 errors: [Field error in object 'loginForm' on field 'password': rejected value [123]; codes [Length.loginForm.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.password,password]; arguments []; default message [password],20,8]; default message [length must be between 8 and 20]] [Field error in object 'loginForm' on field 'username': rejected value [Tom]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,6]; default message [length must be between 6 and 16]] ]
+12:27:53.929 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10908 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:27:53.932 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:27:53.932 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:27:54.894 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:27:54.896 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:27:54.929 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+12:27:55.413 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:27:55.420 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:27:55.421 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:27:55.421 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:27:55.531 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:27:55.531 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1545 ms
+12:27:56.533 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:27:56.807 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:27:56.920 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:27:56.943 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:27:57.009 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 3.738 seconds (JVM running for 5.128)
+12:30:37.322 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:30:37.330 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12236 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:30:37.331 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:30:38.415 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:30:38.417 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:30:38.443 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+12:30:39.012 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:30:39.020 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:30:39.020 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:30:39.021 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:30:39.134 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:30:39.134 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1723 ms
+12:30:40.233 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:30:40.505 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:30:40.618 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:30:40.657 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:30:40.738 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.153 seconds (JVM running for 6.041)
+12:31:09.714 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:31:09.714 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:31:09.718 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+12:31:09.912 [http-nio-12358-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm): [Field error in object 'loginForm' on field 'username': rejected value [Tom]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,11]; default message [用户名长度不合规]] ]
+12:46:29.895 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 8384 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:46:29.898 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:46:29.897 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:46:31.689 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:46:31.691 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:46:31.719 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+12:46:32.357 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:46:32.371 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:46:32.372 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:46:32.373 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:46:32.548 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:46:32.549 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2516 ms
+12:46:33.899 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:46:34.208 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:46:34.386 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:46:34.447 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:46:34.676 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.887 seconds (JVM running for 7.527)
+12:46:34.784 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:46:34.784 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:46:34.786 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+12:49:16.741 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:49:16.755 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 9152 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:49:16.756 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:49:18.262 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:49:18.265 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:49:18.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+12:49:18.907 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:49:18.915 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:49:18.915 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:49:18.915 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:49:19.469 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:49:19.469 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2599 ms
+12:49:21.185 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:49:21.904 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:49:22.146 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:49:22.197 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:49:22.304 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 6.367 seconds (JVM running for 8.126)
+12:50:06.371 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:50:06.371 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:50:06.379 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+12:56:39.891 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 7056 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:56:39.891 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:56:39.895 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:56:43.524 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:56:43.526 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:56:43.577 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+12:56:44.624 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:56:44.636 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:56:44.637 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:56:44.637 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:56:44.761 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:56:44.762 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4799 ms
+12:56:45.899 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:56:46.181 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:56:46.295 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:56:46.335 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:56:46.409 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 7.199 seconds (JVM running for 9.536)
+12:56:47.993 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:56:47.993 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:56:47.994 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:56:48.233 [http-nio-12358-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.toys.acb.handler.BadRequestExceptionHandler#validationBodyException(MethodArgumentNotValidException)
+org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.validation.DefaultMessageCodesResolver]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.validation.DefaultMessageCodesResolver and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.validation.BeanPropertyBindingResult["messageCodesResolver"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:460)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1323)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1134)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.validation.DefaultMessageCodesResolver and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.validation.BeanPropertyBindingResult["messageCodesResolver"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1276)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:71)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:33)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1514)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1006)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:454)
+	... 43 common frames omitted
+12:56:48.236 [http-nio-12358-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm): [Field error in object 'loginForm' on field 'username': rejected value [Tom]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,11]; default message [用户名长度不合规]] ]
+12:57:04.466 [http-nio-12358-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.toys.acb.handler.BadRequestExceptionHandler#validationBodyException(MethodArgumentNotValidException)
+org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.validation.DefaultMessageCodesResolver]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.validation.DefaultMessageCodesResolver and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.validation.BeanPropertyBindingResult["messageCodesResolver"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:460)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1323)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1134)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.validation.DefaultMessageCodesResolver and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.validation.BeanPropertyBindingResult["messageCodesResolver"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1276)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:71)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:33)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1514)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1006)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:454)
+	... 43 common frames omitted
+12:57:04.469 [http-nio-12358-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.toys.acb.dto.Result com.toys.acb.controller.AuthController.login(com.toys.acb.dto.LoginForm): [Field error in object 'loginForm' on field 'username': rejected value [Tom]; codes [Length.loginForm.username,Length.username,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginForm.username,username]; arguments []; default message [username],16,11]; default message [用户名长度不合规]] ]
+12:57:52.707 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 5260 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+12:57:52.707 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+12:57:52.710 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+12:57:53.862 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+12:57:53.864 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:57:53.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+12:57:54.708 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+12:57:54.718 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+12:57:54.718 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:57:54.719 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+12:57:54.868 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:57:54.869 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2100 ms
+12:57:56.079 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:57:56.380 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:57:56.505 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+12:57:56.547 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+12:57:56.653 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.524 seconds (JVM running for 6.265)
+12:57:57.300 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:57:57.300 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:57:57.301 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:00:12.063 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:00:12.069 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 11800 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:00:12.069 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:00:13.673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:00:13.677 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:00:13.707 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:00:14.417 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:00:14.426 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:00:14.426 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:00:14.426 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:00:14.553 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:00:14.554 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2375 ms
+13:00:15.747 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:00:16.073 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:00:16.205 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:00:16.234 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:00:16.322 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.228 seconds (JVM running for 6.953)
+13:00:18.635 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:00:18.635 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:00:18.637 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:01:02.435 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:01:02.443 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 4012 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:01:02.446 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:01:03.709 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:01:03.712 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:01:03.762 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+13:01:04.326 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:01:04.335 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:01:04.335 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:01:04.336 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:01:04.450 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:01:04.450 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1927 ms
+13:01:05.566 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:01:05.841 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:01:05.988 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:01:06.019 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:01:06.099 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.409 seconds (JVM running for 6.017)
+13:01:08.121 [http-nio-12358-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:01:08.122 [http-nio-12358-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:01:08.126 [http-nio-12358-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+13:02:15.798 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 2428 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:02:15.798 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:02:15.801 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:02:17.239 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:02:17.243 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:02:17.292 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+13:02:18.061 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:02:18.068 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:02:18.069 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:02:18.070 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:02:18.185 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:02:18.185 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2319 ms
+13:02:19.430 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:02:19.734 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:02:19.859 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:02:19.888 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:02:19.969 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.91 seconds (JVM running for 6.521)
+13:02:23.437 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:02:23.437 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:02:23.438 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:03:22.341 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12656 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:03:22.341 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:03:22.344 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:03:23.519 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:03:23.521 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:03:23.560 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+13:03:24.128 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:03:24.135 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:03:24.135 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:03:24.136 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:03:24.252 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:03:24.252 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1831 ms
+13:03:25.412 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:03:25.716 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:03:25.839 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:03:25.866 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:03:25.946 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.33 seconds (JVM running for 6.023)
+13:04:25.066 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:04:25.066 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:04:25.070 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+13:04:55.550 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:04:55.570 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10012 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:04:55.571 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:04:57.025 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:04:57.027 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:04:57.056 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:04:57.740 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:04:57.750 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:04:57.751 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:04:57.751 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:04:57.926 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:04:57.926 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2255 ms
+13:04:59.102 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:04:59.397 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:04:59.509 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:04:59.545 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:04:59.622 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.923 seconds (JVM running for 6.786)
+13:05:17.176 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12740 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:05:17.179 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:05:17.192 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:05:18.282 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:05:18.284 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:05:18.311 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+13:05:18.867 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:05:18.877 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:05:18.878 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:05:18.878 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:05:18.993 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:05:18.994 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1746 ms
+13:05:20.462 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:05:20.803 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:05:20.916 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:05:20.943 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:05:21.026 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.621 seconds (JVM running for 5.995)
+13:05:23.852 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:05:23.852 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:05:23.854 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:06:09.014 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12060 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:06:09.017 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:06:09.018 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:06:11.782 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:06:11.786 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:06:12.040 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+13:06:15.263 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:06:15.272 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:06:15.274 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:06:15.274 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:06:15.390 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:06:15.390 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6086 ms
+13:06:16.610 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:06:16.926 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:06:17.054 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:06:17.084 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:06:17.164 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 10.575 seconds (JVM running for 13.731)
+13:06:25.615 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:06:25.616 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:06:25.617 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:06:42.870 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:06:42.876 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 11356 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:06:42.878 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:06:44.028 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:06:44.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:06:44.066 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+13:06:44.632 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:06:44.639 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:06:44.640 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:06:44.640 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:06:44.754 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:06:44.754 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1812 ms
+13:06:45.897 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:06:46.206 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:06:46.394 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:06:46.425 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:06:46.552 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.415 seconds (JVM running for 6.2)
+13:07:02.173 [http-nio-12358-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:07:02.173 [http-nio-12358-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:07:02.174 [http-nio-12358-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:13:45.124 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:13:45.129 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12888 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:13:45.130 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:13:46.471 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:13:46.475 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:13:46.506 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:13:47.122 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:13:47.134 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:13:47.135 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:13:47.136 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:13:47.280 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:13:47.281 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2066 ms
+13:13:48.631 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:13:49.011 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:13:49.133 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:13:49.166 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:13:49.298 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.097 seconds (JVM running for 7.203)
+13:14:07.274 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 2860 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:14:07.278 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:14:07.287 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:14:08.566 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:14:08.569 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:14:08.608 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+13:14:09.225 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:14:09.234 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:14:09.234 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:14:09.235 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:14:09.391 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:14:09.392 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2021 ms
+13:14:11.237 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:14:11.607 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:14:11.756 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:14:11.796 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:14:11.898 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.415 seconds (JVM running for 7.442)
+13:14:32.498 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:14:32.498 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:14:32.502 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+13:15:20.561 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:15:20.565 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10264 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:15:20.566 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:15:21.722 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:15:21.725 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:15:21.764 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+13:15:22.335 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:15:22.342 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:15:22.343 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:15:22.343 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:15:22.461 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:15:22.462 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1839 ms
+13:15:23.654 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:15:23.943 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:15:24.095 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:15:24.126 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:15:24.215 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.628 seconds (JVM running for 7.611)
+13:15:27.301 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:15:27.301 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:15:27.303 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:17:49.318 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:17:49.327 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 9628 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:17:49.328 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:17:50.704 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:17:50.707 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:17:50.739 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+13:17:51.447 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:17:51.457 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:17:51.458 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:17:51.458 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:17:51.601 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:17:51.602 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2203 ms
+13:17:52.982 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:17:53.323 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:17:53.468 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:17:53.499 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:17:53.595 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.006 seconds (JVM running for 6.834)
+13:17:56.315 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:17:56.315 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:17:56.317 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:21:19.935 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:21:19.934 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10760 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:21:19.938 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:21:21.148 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:21:21.150 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:21:21.177 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+13:21:21.786 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:21:21.794 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:21:21.795 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:21:21.795 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:21:21.919 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:21:21.919 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1900 ms
+13:21:23.231 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:21:23.530 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:21:23.653 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:21:23.683 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:21:23.782 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.681 seconds (JVM running for 6.302)
+13:21:44.837 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:21:44.837 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:21:44.838 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:23:22.222 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:23:22.226 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 7964 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:23:22.227 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:23:23.336 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:23:23.338 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:23:23.363 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:23:23.969 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:23:23.979 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:23:23.979 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:23:23.980 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:23:24.098 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:23:24.098 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1816 ms
+13:23:25.239 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:23:25.514 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:23:25.622 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:23:25.662 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:23:25.767 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.199 seconds (JVM running for 6.095)
+13:23:56.941 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:23:56.941 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:23:56.942 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:24:54.501 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:24:54.501 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 8568 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:24:54.506 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:24:55.836 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:24:55.840 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:24:55.876 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+13:24:56.567 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:24:56.577 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:24:56.577 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:24:56.578 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:24:56.696 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:24:56.697 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2099 ms
+13:24:57.856 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:24:58.162 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:24:58.291 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:24:58.332 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:24:58.422 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.753 seconds (JVM running for 6.924)
+13:25:19.970 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:25:19.971 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:25:19.972 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:26:29.794 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:26:29.806 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10460 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:26:29.806 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:26:31.038 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:26:31.040 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:26:31.077 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+13:26:31.672 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:26:31.681 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:26:31.681 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:26:31.681 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:26:31.807 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:26:31.808 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1922 ms
+13:26:33.279 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:26:33.564 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:26:33.689 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:26:33.718 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:26:33.827 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.906 seconds (JVM running for 6.439)
+13:26:37.730 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:26:37.731 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:26:37.733 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:27:54.495 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 4300 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:27:54.498 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:27:54.501 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:27:56.988 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:27:56.994 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:27:57.066 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+13:27:58.501 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:27:58.515 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:27:58.515 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:27:58.516 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:27:58.724 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:27:58.724 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4104 ms
+13:27:59.954 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:28:00.271 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:28:00.394 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:28:00.431 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:28:00.574 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 6.952 seconds (JVM running for 9.027)
+13:28:10.730 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:28:10.730 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:28:10.732 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:29:34.439 [http-nio-12358-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13:40:22.021 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:40:22.028 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 8588 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:40:22.029 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:40:24.146 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:40:24.149 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:40:24.211 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+13:40:25.271 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:40:25.278 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:40:25.279 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:40:25.279 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:40:25.396 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:40:25.397 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3297 ms
+13:40:26.979 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:40:27.413 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:40:27.606 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:40:27.645 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:40:27.717 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 6.295 seconds (JVM running for 8.108)
+13:40:28.358 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:40:28.359 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:40:28.362 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:41:01.570 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:41:01.572 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 14116 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:41:01.574 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:41:02.769 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:41:02.772 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:41:02.808 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+13:41:03.445 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:41:03.452 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:41:03.453 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:41:03.453 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:41:03.593 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:41:03.593 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1944 ms
+13:41:04.823 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:41:05.116 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:41:05.237 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:41:05.266 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:41:05.377 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.636 seconds (JVM running for 6.591)
+13:41:11.752 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:41:11.752 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:41:11.754 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:41:38.824 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:41:38.830 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 5156 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:41:38.830 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:41:39.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:41:39.958 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:41:39.995 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+13:41:40.569 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:41:40.577 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:41:40.577 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:41:40.577 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:41:40.693 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:41:40.694 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1789 ms
+13:41:41.940 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:41:42.244 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:41:42.382 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:41:42.414 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:41:42.496 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.42 seconds (JVM running for 6.12)
+13:41:44.658 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:41:44.658 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:41:44.659 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:44:59.665 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 3740 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:44:59.673 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:44:59.674 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:45:01.157 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:45:01.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:45:01.198 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+13:45:01.757 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:45:01.768 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:45:01.769 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:45:01.769 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:45:01.897 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:45:01.898 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2141 ms
+13:45:03.149 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:45:03.463 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:45:03.578 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:45:03.607 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:45:03.696 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.354 seconds (JVM running for 7.706)
+13:45:08.261 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:45:08.261 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:45:08.263 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:46:14.622 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:46:14.622 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12656 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:46:14.626 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:46:15.807 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:46:15.809 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:46:15.856 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+13:46:16.561 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:46:16.569 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:46:16.570 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:46:16.570 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:46:16.744 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:46:16.744 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2065 ms
+13:46:18.633 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:46:19.166 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:46:19.325 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:46:19.354 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:46:19.460 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.566 seconds (JVM running for 7.749)
+13:46:27.120 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10452 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:46:27.121 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:46:27.124 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:46:28.582 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:46:28.584 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:46:28.613 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:46:29.262 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:46:29.275 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:46:29.275 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:46:29.275 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:46:29.415 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:46:29.416 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2218 ms
+13:46:30.701 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:46:31.051 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:46:31.219 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:46:31.250 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:46:31.327 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.224 seconds (JVM running for 7.119)
+13:46:36.588 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:46:36.588 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:46:36.589 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:48:22.520 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:48:22.530 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 9252 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:48:22.530 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:48:23.832 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:48:23.834 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:48:23.862 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:48:24.506 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:48:24.516 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:48:24.517 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:48:24.517 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:48:24.650 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:48:24.651 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2039 ms
+13:48:25.984 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:48:26.366 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:48:26.495 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:48:26.528 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:48:26.621 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.91 seconds (JVM running for 7.157)
+13:48:32.817 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:48:32.817 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:48:32.819 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:50:34.606 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:50:34.606 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 14120 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:50:34.609 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:50:35.999 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:50:36.002 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:50:36.046 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+13:50:36.693 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:50:36.704 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:50:36.705 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:50:36.705 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:50:36.863 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:50:36.864 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2167 ms
+13:50:38.452 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:50:38.797 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:50:38.932 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:50:38.963 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:50:39.046 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.179 seconds (JVM running for 6.97)
+13:50:40.973 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:50:40.974 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:50:40.975 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+13:51:09.328 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10700 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+13:51:09.331 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+13:51:09.332 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+13:51:10.444 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+13:51:10.446 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:51:10.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+13:51:11.048 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+13:51:11.055 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+13:51:11.056 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:51:11.056 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+13:51:11.165 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:51:11.165 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1780 ms
+13:51:12.278 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:51:12.556 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:51:12.683 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+13:51:12.712 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+13:51:12.783 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.069 seconds (JVM running for 5.951)
+13:51:14.085 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:51:14.086 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:51:14.087 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:22:23.539 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 7224 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+14:22:23.537 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+14:22:23.541 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+14:22:24.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:22:24.704 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:22:24.728 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+14:22:25.314 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+14:22:25.321 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+14:22:25.321 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:22:25.322 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:22:25.438 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:22:25.439 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1807 ms
+14:22:26.561 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:22:26.835 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:22:26.906 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7c43c352-26a7-4e54-8d4e-28ac9093954f
+
+14:22:27.106 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b630d4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1826475, org.springframework.security.web.header.HeaderWriterFilter@8167f57, org.springframework.security.web.csrf.CsrfFilter@2173e4d5, org.springframework.security.web.authentication.logout.LogoutFilter@24f5e9e8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b1137b0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@50e6ee24, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@70aa03c0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5ced0537, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b1559f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59d0fac9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44da745f, org.springframework.security.web.session.SessionManagementFilter@541897c6, org.springframework.security.web.access.ExceptionTranslationFilter@efa04b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67f266bd]
+14:22:27.252 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+14:22:27.277 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+14:22:27.345 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.516 seconds (JVM running for 6.529)
+14:40:51.500 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 12404 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+14:40:51.500 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+14:40:51.503 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+14:40:52.816 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:40:52.818 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:40:52.847 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+14:40:53.304 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7d4d8579' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:40:53.313 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:40:53.568 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+14:40:53.577 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+14:40:53.578 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:40:53.578 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:40:53.712 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:40:53.712 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2124 ms
+14:40:54.706 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: permitAll only works with HttpSecurity.authorizeRequests()
+14:40:54.713 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+14:40:54.725 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:40:54.757 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: permitAll only works with HttpSecurity.authorizeRequests()
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.toys.acb.UserApplication.main(UserApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: permitAll only works with HttpSecurity.authorizeRequests()
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 21 common frames omitted
+Caused by: java.lang.IllegalStateException: permitAll only works with HttpSecurity.authorizeRequests()
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.security.config.annotation.web.configurers.PermitAllSupport.permitAll(PermitAllSupport.java:51)
+	at org.springframework.security.config.annotation.web.configurers.PermitAllSupport.permitAll(PermitAllSupport.java:41)
+	at org.springframework.security.config.annotation.web.configurers.AbstractAuthenticationFilterConfigurer.updateAccessDefaults(AbstractAuthenticationFilterConfigurer.java:392)
+	at org.springframework.security.config.annotation.web.configurers.AbstractAuthenticationFilterConfigurer.init(AbstractAuthenticationFilterConfigurer.java:232)
+	at org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer.init(FormLoginConfigurer.java:231)
+	at org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer.init(FormLoginConfigurer.java:71)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:338)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:300)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:285)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:83)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:305)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 22 common frames omitted
+14:48:44.229 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+14:48:44.242 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 13516 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+14:48:44.243 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+14:48:45.423 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:48:45.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:48:45.453 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+14:48:45.848 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@30bf26df' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:48:45.853 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:48:46.104 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+14:48:46.115 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+14:48:46.115 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:48:46.115 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:48:46.227 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:48:46.227 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1918 ms
+14:48:47.221 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d065e1a, org.springframework.security.web.context.SecurityContextPersistenceFilter@15d79b70, org.springframework.security.web.header.HeaderWriterFilter@1e6cb932, org.springframework.security.web.authentication.logout.LogoutFilter@579f3c8e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b332b23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45424c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c66ddab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c4ca87c, org.springframework.security.web.session.SessionManagementFilter@523abba9, org.springframework.security.web.access.ExceptionTranslationFilter@68821f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@636fccb0]
+14:48:47.687 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:48:47.961 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:48:48.123 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+14:48:48.155 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+14:48:48.249 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.75 seconds (JVM running for 6.332)
+14:48:55.633 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:48:55.633 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:48:55.635 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:49:36.581 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 8532 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+14:49:36.579 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+14:49:36.583 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+14:49:38.000 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:49:38.004 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:49:38.066 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+14:49:38.504 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f171912' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:49:38.513 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:49:38.842 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+14:49:38.851 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+14:49:38.852 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:49:38.853 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:49:38.984 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:49:38.984 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2332 ms
+14:49:40.110 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16b7e04a, org.springframework.security.web.context.SecurityContextPersistenceFilter@47ef5a33, org.springframework.security.web.header.HeaderWriterFilter@4a105556, org.springframework.security.web.authentication.logout.LogoutFilter@b8b2184, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a01ffff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28f90752, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67a6a2d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@661db63e, org.springframework.security.web.session.SessionManagementFilter@42401b81, org.springframework.security.web.access.ExceptionTranslationFilter@e0847a9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@794d28a3]
+14:49:40.613 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:49:40.943 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:49:41.132 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+14:49:41.169 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+14:49:41.253 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.598 seconds (JVM running for 7.814)
+14:49:47.576 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:49:47.576 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:49:47.577 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:54:53.070 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+14:54:53.078 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 11252 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+14:54:53.079 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+14:54:54.927 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:54:54.929 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:54:54.962 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+14:54:55.408 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2574a9e3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:54:55.413 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:54:55.689 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+14:54:55.699 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+14:54:55.700 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:54:55.700 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+14:54:55.836 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:54:55.836 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2675 ms
+14:54:56.921 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/*'] with []
+14:54:56.922 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/*'] with []
+14:54:56.992 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9880a15, org.springframework.security.web.context.SecurityContextPersistenceFilter@63b4b9c6, org.springframework.security.web.header.HeaderWriterFilter@5fa5c8cf, org.springframework.security.web.authentication.logout.LogoutFilter@59f76e56, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@48d5ca17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@603f4e3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d444652, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6febec41, org.springframework.security.web.session.SessionManagementFilter@768f4b42, org.springframework.security.web.access.ExceptionTranslationFilter@22ae32ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1dbeedff]
+14:54:57.510 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:54:57.800 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:54:57.967 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+14:54:57.998 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+14:54:58.117 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.793 seconds (JVM running for 8.129)
+14:54:59.918 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:54:59.919 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:54:59.921 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+16:26:49.420 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 6316 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+16:26:49.423 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+16:26:49.429 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+16:26:50.630 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:26:50.632 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+16:26:50.657 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+16:26:51.026 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@637791d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:26:51.037 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:26:51.292 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+16:26:51.302 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+16:26:51.303 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:26:51.303 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:26:51.420 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:26:51.420 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1911 ms
+16:26:52.332 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/*'] with []
+16:26:52.332 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/*'] with []
+16:26:52.373 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fd37449, org.springframework.security.web.context.SecurityContextPersistenceFilter@4449a60b, org.springframework.security.web.header.HeaderWriterFilter@73385d3f, org.springframework.security.web.authentication.logout.LogoutFilter@1d806de6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b3c0ecb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d7d8911, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@236fd411, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5402612e, org.springframework.security.web.session.SessionManagementFilter@7fc1fd31, org.springframework.security.web.access.ExceptionTranslationFilter@6be50b35, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@241d1052]
+16:26:52.790 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:26:53.033 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:26:53.151 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+16:26:53.184 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+16:26:53.254 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.447 seconds (JVM running for 7.497)
+16:27:52.835 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+16:27:52.834 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 7800 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+16:27:52.836 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+16:27:53.963 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:27:53.967 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+16:27:54.011 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+16:27:54.385 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@18b6d3c1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:27:54.391 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:27:54.712 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+16:27:54.729 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+16:27:54.738 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:27:54.739 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:27:54.969 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:27:54.969 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2056 ms
+16:27:56.912 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/*'] with []
+16:27:56.913 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/*'] with []
+16:27:56.964 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5402612e, org.springframework.security.web.context.SecurityContextPersistenceFilter@460eb276, org.springframework.security.web.header.HeaderWriterFilter@75a9cc24, org.springframework.security.web.authentication.logout.LogoutFilter@2be50bba, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fd37449, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6cd7f381, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f6f4ac4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43445fc6, org.springframework.security.web.session.SessionManagementFilter@da5d5e1, org.springframework.security.web.access.ExceptionTranslationFilter@304744a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3006bfb]
+16:27:57.457 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:27:57.717 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:27:57.835 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+16:27:57.859 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+16:27:57.931 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.866 seconds (JVM running for 7.542)
+16:28:43.228 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 4060 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+16:28:43.230 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+16:28:43.235 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+16:28:44.573 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:28:44.576 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+16:28:44.604 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+16:28:45.023 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4351ed61' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:28:45.029 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:28:45.255 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+16:28:45.264 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+16:28:45.265 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:28:45.265 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:28:45.372 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:28:45.372 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2066 ms
+16:28:46.311 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/*'] with []
+16:28:46.311 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/*'] with []
+16:28:46.357 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e7a9db7, org.springframework.security.web.context.SecurityContextPersistenceFilter@b808af5, org.springframework.security.web.header.HeaderWriterFilter@b34c7c9, org.springframework.security.web.authentication.logout.LogoutFilter@73385d3f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@646cb2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fd4312a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@290c266c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5315266, org.springframework.security.web.session.SessionManagementFilter@1f6c4ae, org.springframework.security.web.access.ExceptionTranslationFilter@4cc4d454, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7827d7b]
+16:28:46.898 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:28:47.197 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:28:47.343 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+16:28:47.368 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+16:28:47.452 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.986 seconds (JVM running for 7.413)
+16:28:56.953 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:28:56.954 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:28:56.955 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:28:57.405 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Jack
+16:31:35.405 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+16:31:35.405 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 14056 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+16:31:35.407 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+16:31:36.592 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:31:36.596 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+16:31:36.627 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+16:31:37.058 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@348137e8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:31:37.067 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:31:37.330 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+16:31:37.338 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+16:31:37.339 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:31:37.339 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+16:31:37.456 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:31:37.456 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1998 ms
+16:31:38.313 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/*'] with []
+16:31:38.314 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/*'] with []
+16:31:38.353 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5072e638, org.springframework.security.web.context.SecurityContextPersistenceFilter@7df3da0b, org.springframework.security.web.header.HeaderWriterFilter@7d7d8911, org.springframework.security.web.authentication.logout.LogoutFilter@160c7c42, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@17befef0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70777a65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@288409f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3129299f, org.springframework.security.web.session.SessionManagementFilter@4ffe3d42, org.springframework.security.web.access.ExceptionTranslationFilter@ce2eaa7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@431babe6]
+16:31:38.758 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:31:39.029 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:31:39.166 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+16:31:39.204 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+16:31:39.273 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.319 seconds (JVM running for 5.811)
+16:31:41.623 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:31:41.624 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:31:41.625 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:31:42.008 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Jack
+19:38:42.209 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s471ms213µs200ns).
+22:34:14.270 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h55m40s22ms239µs800ns).
+22:45:00.455 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 3276 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+22:45:00.458 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+22:45:00.469 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+22:45:02.605 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+22:45:02.607 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+22:45:02.637 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+22:45:03.148 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@691124ee' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:45:03.155 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:45:03.819 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+22:45:03.850 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+22:45:03.852 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:45:03.853 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+22:45:04.160 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:45:04.161 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3645 ms
+22:45:06.481 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/*'] with []
+22:45:06.481 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/*'] with []
+22:45:06.523 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50672905, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a0ffb9b, org.springframework.security.web.header.HeaderWriterFilter@61eab26b, org.springframework.security.web.authentication.logout.LogoutFilter@5b0e9e0c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ebbc06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8549c5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2be50bba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@430d3021, org.springframework.security.web.session.SessionManagementFilter@116fc29e, org.springframework.security.web.access.ExceptionTranslationFilter@727dcc64, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11015ca0]
+22:45:07.060 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:45:07.815 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:45:07.970 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+22:45:08.008 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+22:45:08.154 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 8.57 seconds (JVM running for 11.638)
+22:45:08.600 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:45:08.600 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:45:08.602 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+22:45:09.152 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Jack
+22:49:22.186 [http-nio-12358-exec-5] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Tom
+22:49:58.865 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Tom
+22:54:46.774 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 8524 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+22:54:46.773 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+22:54:46.778 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+22:54:48.570 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+22:54:48.572 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+22:54:48.608 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+22:54:49.067 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@384fda47' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:54:49.076 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:54:49.420 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+22:54:49.434 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+22:54:49.434 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:54:49.435 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+22:54:49.612 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:54:49.612 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2744 ms
+22:54:50.761 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+22:54:50.761 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+22:54:50.835 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b808af5, org.springframework.security.web.context.SecurityContextPersistenceFilter@40017e98, org.springframework.security.web.header.HeaderWriterFilter@208e5b23, org.springframework.security.web.authentication.logout.LogoutFilter@9880a15, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b490d5e, org.springframework.security.web.session.ConcurrentSessionFilter@16b7e04a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dbc7e0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ddd84d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18b04526, org.springframework.security.web.session.SessionManagementFilter@aee05f4, org.springframework.security.web.access.ExceptionTranslationFilter@106459d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b34c7c9]
+22:54:51.341 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:54:51.685 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:54:51.888 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+22:54:51.946 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+22:54:52.077 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 6.369 seconds (JVM running for 8.375)
+22:55:06.059 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:55:06.059 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:55:06.060 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+22:55:06.519 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Tom
+22:55:45.127 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+22:55:45.132 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 15724 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+22:55:45.133 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+22:55:46.321 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+22:55:46.324 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+22:55:46.354 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+22:55:46.748 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@261bd7b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:55:46.754 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22:55:47.014 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+22:55:47.021 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+22:55:47.022 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:55:47.023 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+22:55:47.138 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:55:47.138 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1935 ms
+22:55:48.127 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+22:55:48.127 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+22:55:48.179 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@da5d5e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d174ad, org.springframework.security.web.header.HeaderWriterFilter@7c4ca87c, org.springframework.security.web.authentication.logout.LogoutFilter@3cb04dd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7fc1fd31, org.springframework.security.web.session.ConcurrentSessionFilter@3722f39d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@173a5fad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7742a276, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d7d8911, org.springframework.security.web.session.SessionManagementFilter@1dbeedff, org.springframework.security.web.access.ExceptionTranslationFilter@5ddd84d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6814262d]
+22:55:48.639 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:55:48.935 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:55:49.101 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+22:55:49.150 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+22:55:49.245 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.751 seconds (JVM running for 6.594)
+22:56:09.483 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:56:09.483 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:56:09.484 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+22:56:09.923 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Tom
+22:56:23.013 [http-nio-12358-exec-4] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Jack
+22:57:17.808 [http-nio-12358-exec-9] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Jack
+22:57:33.781 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Tom
+23:01:35.510 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 7452 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+23:01:35.510 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+23:01:35.512 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+23:01:36.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+23:01:36.880 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:01:36.926 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+23:01:37.500 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@11d86b9d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:01:37.511 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:01:37.769 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+23:01:37.779 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+23:01:37.780 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:01:37.780 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+23:01:37.904 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:01:37.905 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2338 ms
+23:01:39.109 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+23:01:39.109 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+23:01:39.174 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e7a9db7, org.springframework.security.web.context.SecurityContextPersistenceFilter@b808af5, org.springframework.security.web.header.HeaderWriterFilter@3cb04dd, org.springframework.security.web.authentication.logout.LogoutFilter@68d8ae27, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3350ab4, org.springframework.security.web.session.ConcurrentSessionFilter@1c58d7be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fd4312a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@290c266c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5315266, org.springframework.security.web.session.SessionManagementFilter@30fa8a6b, org.springframework.security.web.access.ExceptionTranslationFilter@20231384, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ec0ca83]
+23:01:39.759 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:01:40.110 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:01:40.327 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+23:01:40.409 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+23:01:40.519 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 5.775 seconds (JVM running for 7.909)
+23:02:08.049 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:02:08.050 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:02:08.054 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+23:02:13.184 [http-nio-12358-exec-3] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Tom
+23:02:22.088 [http-nio-12358-exec-4] INFO  c.t.acb.service.impl.UserServiceImpl - getAllBillList: page=1, size=10, userId=null
+23:15:12.907 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+23:15:12.912 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 13536 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+23:15:12.913 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+23:15:14.083 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+23:15:14.085 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:15:14.112 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+23:15:14.507 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f992a3a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:15:14.515 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:15:14.769 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+23:15:14.778 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+23:15:14.779 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:15:14.779 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+23:15:14.892 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:15:14.892 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1914 ms
+23:15:15.874 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+23:15:15.875 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+23:15:15.927 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75a9cc24, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c1ea7be, org.springframework.security.web.header.HeaderWriterFilter@7aa15a80, org.springframework.security.web.authentication.logout.LogoutFilter@35becbd4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@73385d3f, org.springframework.security.web.session.ConcurrentSessionFilter@4e8afdad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42d174ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60194904, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4449a60b, org.springframework.security.web.session.SessionManagementFilter@7c4ca87c, org.springframework.security.web.access.ExceptionTranslationFilter@66a472b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@304744a1]
+23:15:16.391 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:15:16.695 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:15:16.891 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+23:15:16.935 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+23:15:17.019 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.731 seconds (JVM running for 6.995)
