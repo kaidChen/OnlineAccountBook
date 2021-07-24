@@ -6,6 +6,7 @@ import com.toys.acb.dto.Result;
 import com.toys.acb.entity.*;
 import com.toys.acb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +25,7 @@ public class UserController {
         return (SysUser) request.getSession().getAttribute("user");
     }
 
+    @PreAuthorize("hasRole('user')")
     @GetMapping("/test")
     public SysUser test() {
 //        String username = (String) request.getSession().getAttribute("username");
@@ -33,6 +35,7 @@ public class UserController {
         return getUser();
     }
 
+    @PreAuthorize("hasRole('user')")
     @GetMapping("/bill/list")
     public Result getBillList(@RequestParam(value = "page", defaultValue = "1") Integer page,
                               @RequestParam(value = "size", defaultValue = "10") Integer size) {
@@ -48,7 +51,8 @@ public class UserController {
         return Result.ok().addDate("bill_list", allBillList);
     }
 
-    @PostMapping("/bill/add")
+    @PreAuthorize("hasRole('user')")
+    @PostMapping("/bill")
     public Result addBill(@RequestBody Bill bill) {
         SysUser sysUser = getUser();
         if (sysUser == null) {
@@ -63,7 +67,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PutMapping("bill/update")
+    @PreAuthorize("hasRole('user')")
+    @PutMapping("bill")
     public Result updateBill(@RequestBody Bill bill) {
         SysUser sysUser = getUser();
         if (sysUser == null) {
@@ -78,7 +83,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @DeleteMapping("/bill/delete")
+    @PreAuthorize("hasRole('user')")
+    @DeleteMapping("/bill")
     public Result deleteBill(@RequestParam("id") Long id) {
         SysUser sysUser = getUser();
         if (sysUser == null) {
@@ -92,7 +98,7 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-
+    @PreAuthorize("hasRole('user')")
     @GetMapping("/type/list")
     public Result getTypeList() {
         SysUser sysUser = getUser();
@@ -103,7 +109,8 @@ public class UserController {
         return Result.ok().addDate("type_list", allTypes);
     }
 
-    @PostMapping("/type/add")
+    @PreAuthorize("hasRole('user')")
+    @PostMapping("/type")
     public Result addType(@RequestBody Type type) {
         SysUser sysUser = getUser();
         if (sysUser == null) {
@@ -117,7 +124,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @PutMapping("/type/update")
+    @PreAuthorize("hasRole('user')")
+    @PutMapping("/type")
     public Result updateType(@RequestBody Type type) {
         SysUser sysUser = getUser();
         if (sysUser == null) {
@@ -131,7 +139,8 @@ public class UserController {
         return Result.ok().message(String.format("增添%d条数据", rows));
     }
 
-    @DeleteMapping("/type/delete")
+    @PreAuthorize("hasRole('user')")
+    @DeleteMapping("/type")
     public Result deleteType(@RequestParam("id") Long id) {
         SysUser sysUser = getUser();
         if (sysUser == null) {
