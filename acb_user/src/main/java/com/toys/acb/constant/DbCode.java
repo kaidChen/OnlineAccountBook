@@ -11,7 +11,10 @@ public enum DbCode {
     TYPE_STATUS_INVISIBLE(0, "不可见"),
     TYPE_STATUS_VISIBLE(1, "可见"),
     USER_STATUE_LOCKED(0, "用户被锁定"),
-    USER_STATUS_UNLOCKED(1, "用户可用");
+    USER_STATUS_UNLOCKED(1, "用户可用"),
+    ROLE_ADMIN(1, "管理员角色"),
+    ROLE_USER(2, "用户角色")
+    ;
 
     private final Integer code;
     private final String msg;

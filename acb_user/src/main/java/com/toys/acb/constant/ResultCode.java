@@ -42,7 +42,7 @@ public enum ResultCode {
     ARITHMETIC_EXCEPTION(9001, "算数异常"),
     NULL_POINTER_EXCEPTION(9002, "空指针异常"),
     ARRAY_INDEX_OUTOFBOUNDS_EXCEPTION(9003, "数组越界"),
-    SYSTEM_EXCEPTION(9004, "数据库异常")
+    SYSTEM_EXCEPTION(9004, "系统异常")
     ;
 
     private final Integer code;

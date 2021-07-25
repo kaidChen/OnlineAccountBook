@@ -1,19 +1,19 @@
 package com.toys.acb.service;
 
 import com.github.pagehelper.PageInfo;
-import com.toys.acb.entity.Bill;
 import com.toys.acb.dto.BillDetail;
+import com.toys.acb.entity.Bill;
 import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
 
 import java.util.List;
 
 public interface UserService {
-    SysUser getUserByUsername(String username);
-
     PageInfo<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId);
 
     PageInfo<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId);
+
+    PageInfo<BillDetail> getBillListByTypeId(Integer page, Integer size, Long typeId, Long userId);
 
     int addBill(Bill bill);
 
@@ -29,7 +29,8 @@ public interface UserService {
 
     int deleteType(Long tid, Long userId);
 
+    SysUser getUserByUserId(Long userId);
+
     int updateNickname(String nickname, Long userId);
 
-    int updatePassword(String password, String newPW, Long userId);
 }

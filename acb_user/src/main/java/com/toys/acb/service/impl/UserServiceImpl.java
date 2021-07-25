@@ -4,8 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.constant.DbCode;
-import com.toys.acb.entity.Bill;
 import com.toys.acb.dto.BillDetail;
+import com.toys.acb.entity.Bill;
 import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
 import com.toys.acb.mapper.BillDetailMapper;
@@ -27,34 +27,16 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.toys.acb.mapper.BillDynamicSqlSupport.bill;
-import static com.toys.acb.mapper.TypeDynamicSqlSupport.type;
 import static com.toys.acb.mapper.SysUserDynamicSqlSupport.sysUser;
+import static com.toys.acb.mapper.TypeDynamicSqlSupport.type;
 import static org.mybatis.dynamic.sql.SqlBuilder.*;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+    private final static Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private SqlSessionBuilder sqlSessionBuilder;
-
-    @Override
-    public SysUser getUserByUsername(String username) {
-        SelectStatementProvider render = select(sysUser.cycle, sysUser.nickname)
-                .from(sysUser)
-                .where(sysUser.username, isEqualTo(username))
-                .build()
-                .render(RenderingStrategies.MYBATIS3);
-
-        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-            SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-            Optional<SysUser> sysUserOptional = sysUserMapper.selectOne(render);
-            return sysUserOptional.orElse(null);
-        } catch (Exception e) {
-            LOGGER.error("error at getUserByUsername: {}", e.getMessage());
-        }
-        return null;
-    }
 
     @Override
     public PageInfo<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId) {
@@ -102,6 +84,30 @@ public class UserServiceImpl implements UserService {
             return new PageInfo<>(billDetailList);
         } catch (Exception e) {
             LOGGER.error("error at getBillListByCycle: {}", e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public PageInfo<BillDetail> getBillListByTypeId(Integer page, Integer size, Long typeId, Long userId) {
+        SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
+                .from(bill)
+                .leftJoin(type)
+                .on(bill.typeId, equalTo(type.id))
+                .where(bill.userId, isEqualTo(userId),
+                        and(bill.typeId, isEqualTo(typeId)))
+                .orderBy(bill.time.descending())
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
+            PageHelper.startPage(page, size);
+            List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
+            LOGGER.info("getBillListByTypeId: page={}, size={}, typeId={}, userId={}", page, size, typeId, userId);
+            return new PageInfo<>(billDetailList);
+        } catch (Exception e) {
+            LOGGER.error("error at getBillListByTypeId: {}", e.getMessage());
         }
         return null;
     }
@@ -199,16 +205,18 @@ public class UserServiceImpl implements UserService {
             TypeMapper typeMapper = sqlSession.getMapper(TypeMapper.class);
             Type checkTypeExist = typeMapper.selectOne(selectType).orElse(null);
             if (checkTypeExist == null) {
+                if (getTypeList(record.getUserId()).size() > 30) {
+                    LOGGER.info("unable to insert Type, for amount is at the limit. record: {}", record);
+                    return -2;
+                }
                 rows = typeMapper.insertSelective(record);
+                LOGGER.info("addType: user_id={}, type_name={}", record.getUserId(), record);
             } else {
-                UpdateStatementProvider updateTypeStatus = update(type)
-                        .set(type.status).equalTo(DbCode.TYPE_STATUS_VISIBLE.getCode())
-                        .where(type.id, isEqualTo(checkTypeExist::getId))
-                        .build()
-                        .render(RenderingStrategies.MYBATIS3);
-                rows = typeMapper.update(updateTypeStatus);
+                record.setId(checkTypeExist.getId());
+                record.setStatus(DbCode.TYPE_STATUS_VISIBLE.getCode());
+                rows = typeMapper.updateByPrimaryKeySelective(record);
+                LOGGER.info("addType by recover type_status: user_id={}, type_name={}", record.getUserId(), record.getName());
             }
-            LOGGER.info("addType: {}", record);
             sqlSession.commit();
         } catch (Exception e) {
             LOGGER.error("error at addType: {}", e.getMessage());
@@ -221,9 +229,9 @@ public class UserServiceImpl implements UserService {
         UpdateStatementProvider render = update(type)
                 .set(type.kind).equalToWhenPresent(record::getKind)
                 .set(type.name).equalToWhenPresent(record::getName)
-                .where(type.id, isEqualTo(record.getId()),
+                .where(type.id, isEqualTo(record::getId),
                         // 验证数据库中的user_id是否等于用户填写的id
-                        and(type.userId, isEqualTo(record.getUserId())))
+                        and(type.userId, isEqualTo(record::getUserId)))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
         int rows = -1;
@@ -247,15 +255,40 @@ public class UserServiceImpl implements UserService {
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
         int rows = -1;
+
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             TypeMapper typeMapper = sqlSession.getMapper(TypeMapper.class);
-            rows = typeMapper.update(render);
-            LOGGER.info("deleteType: id={}", tid);
+
+            if(getBillListByTypeId(1, 1, tid, userId).getTotal() > 0) {
+                rows = typeMapper.deleteByPrimaryKey(tid);
+                LOGGER.info("deleteType: id={}", tid);
+            } else {
+                rows = typeMapper.update(render);
+                LOGGER.info("deleteType by update status: id={}", tid);
+            }
             sqlSession.commit();
         } catch (Exception e) {
             LOGGER.error("error at deleteType: {}", e.getMessage());
         }
         return rows;
+    }
+
+    @Override
+    public SysUser getUserByUserId(Long userId) {
+        SelectStatementProvider render = select(sysUser.cycle, sysUser.nickname)
+                .from(sysUser)
+                .where(sysUser.id, isEqualTo(userId))
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
+            Optional<SysUser> sysUserOptional = sysUserMapper.selectOne(render);
+            return sysUserOptional.orElse(null);
+        } catch (Exception e) {
+            LOGGER.error("error at getUserByUserId: {}", e.getMessage());
+        }
+        return null;
     }
 
     @Override
@@ -276,28 +309,5 @@ public class UserServiceImpl implements UserService {
             LOGGER.error("error at updateNickname: {}", e.getMessage());
         }
         return rows;
-    }
-
-    @Override
-    public int updatePassword(String password, String newPW, Long userId) {
-//        int rows = -1;
-//        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-//            SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-//            newPW = passwordEncoder.encode(newPW);
-//
-//
-//            rows = sysUserMapper.update(update(sysUser)
-//                    .set(sysUser.password).equalTo(newPW)
-//                    .where(sysUser.id, isEqualTo(userId),
-//                            and(sysUser.password, isEqualTo(password)))
-//                    .build()
-//                    .render(RenderingStrategies.MYBATIS3));
-//            LOGGER.info("updatePassword: userId={}", userId);
-//            sqlSession.commit();
-//        } catch (Exception e) {
-//            LOGGER.error("error at updatePassword: {}", e.getMessage());
-//        }
-//        return rows;
-        return 0;
     }
 }

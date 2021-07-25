@@ -5,6 +5,7 @@ import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.BillDetail;
 import com.toys.acb.dto.Result;
 import com.toys.acb.entity.Bill;
+import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
 import com.toys.acb.service.UserService;
 import io.swagger.annotations.ApiOperation;
@@ -17,7 +18,6 @@ import java.util.List;
 
 @RestController
 public class UserController {
-
     @Autowired
     private HttpServletRequest request;
 
@@ -54,6 +54,20 @@ public class UserController {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
         PageInfo<BillDetail> billPage = userService.getBillListByCycle(page, size, cycle, userId);
+        return Result.ok().addDate("page_info", billPage);
+    }
+
+    @ApiOperation("获取用户指定类型的账单")
+    @PreAuthorize("hasAnyRole('user')")
+    @GetMapping("/bill/type_list")
+    public Result getBillListByTypeId(@RequestParam(value = "page", defaultValue = "1") Integer page,
+                                      @RequestParam(value = "size", defaultValue = "10") Integer size,
+                                      @RequestParam("id") Long id) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
+            return Result.error(ResultCode.USER_NOT_LOGIN);
+        }
+        PageInfo<BillDetail> billPage = userService.getBillListByTypeId(page, size, id, userId);
         return Result.ok().addDate("page_info", billPage);
     }
 
@@ -127,6 +141,9 @@ public class UserController {
         type.setUserId(userId);
         int rows = userService.addType(type);
         if (rows < 0) {
+            if (rows == -2) {
+                return Result.error().message("类型数量已达上限");
+            }
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
         return Result.ok().message(String.format("增添%d条数据", rows));
@@ -161,5 +178,20 @@ public class UserController {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
         return Result.ok().message(String.format("增添%d条数据", rows));
+    }
+
+    @ApiOperation("获取用户信息")
+    @PreAuthorize("hasAnyRole('user')")
+    @GetMapping("/user")
+    public Result getUserInfo() {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
+            return Result.error(ResultCode.USER_NOT_LOGIN);
+        }
+        SysUser user = userService.getUserByUserId(userId);
+        if (user == null) {
+            return Result.error().message("获取用户信息失败");
+        }
+        return Result.ok().addDate("user", user);
     }
 }
