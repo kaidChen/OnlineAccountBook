@@ -1368,3 +1368,35 @@ Caused by: java.lang.ClassNotFoundException: javax.xml.bind.annotation.XmlType
 01:53:49.553 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 01:53:49.554 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 01:53:57.365 [http-nio-12358-exec-4] INFO  c.t.acb.service.impl.AuthServiceImpl - 用户登录成功：username=Jack
+23:07:24.189 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+23:07:24.200 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 13676 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+23:07:24.226 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+23:07:26.036 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+23:07:26.040 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:07:26.098 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+23:07:26.842 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@718fd7c1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:07:26.852 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:07:27.308 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+23:07:27.321 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+23:07:27.322 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:07:27.322 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+23:07:27.511 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:07:27.511 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3171 ms
+23:07:28.871 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+23:07:29.251 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+23:07:29.252 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+23:07:29.302 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d9428f3, org.springframework.security.web.context.SecurityContextPersistenceFilter@537b3be1, org.springframework.security.web.header.HeaderWriterFilter@2f6e92ca, org.springframework.security.web.authentication.logout.LogoutFilter@1e5b33e5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23d0944b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31f5b923, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2acb1264, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ac19bc6, org.springframework.security.web.session.SessionManagementFilter@114b203, org.springframework.security.web.access.ExceptionTranslationFilter@77e6761f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@559e3f67]
+23:07:30.203 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:07:32.098 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:07:32.280 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+23:07:32.316 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+23:07:32.317 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+23:07:32.352 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+23:07:32.399 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+23:07:32.702 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 9.355 seconds (JVM running for 11.992)
+23:07:32.975 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:07:32.976 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:07:32.977 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+23:07:33.462 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - login success：username=Tom
+23:07:33.501 [http-nio-12358-exec-1] INFO  c.toys.acb.controller.AuthController - 用户登录成功：Tom
+23:07:36.974 [http-nio-12358-exec-2] INFO  c.t.acb.service.impl.UserServiceImpl - getCurrentBillList: page=1, size=4, userId=1

@@ -1,5 +1,6 @@
 package com.toys.acb.controller;
 
+import com.toys.acb.component.SessionUtil;
 import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.LoginForm;
 import com.toys.acb.dto.PasswordForm;
@@ -41,6 +42,9 @@ public class AuthController {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    private SessionUtil sessionUtil;
+
     @ApiOperation("用户登录")
     @PostMapping("/login")
     public Result login(@RequestBody @Valid LoginForm loginForm) {
@@ -62,10 +66,12 @@ public class AuthController {
         }
 
         request.getSession().setAttribute("userId", userId);
+        request.getSession().setMaxInactiveInterval(600); //过期时间
 
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authentication);
+        sessionUtil.login(username, request.getSession());
 
         LOGGER.info("用户登录成功：{}", username);
         return Result.ok().message("登录成功");
@@ -74,7 +80,7 @@ public class AuthController {
     @ApiOperation("注册账号")
     @PreAuthorize("hasAnyRole('admin')")
     @PutMapping("/signup")
-    public Result signup(@RequestBody SysUser sysUser) {
+    public Result signup(@RequestBody @Valid SysUser sysUser) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
@@ -101,7 +107,7 @@ public class AuthController {
         String newPW = passwordForm.getNewPassword();
         int rows = authService.updatePassword(oldPW, newPW, userId);
         if (rows < 0) {
-            if(rows == -2) {
+            if (rows == -2) {
                 LOGGER.info("修改密码失败，用户不存在：user_id={}", userId);
                 return Result.error(ResultCode.USER_ACCOUNT_NOT_EXIST);
             }
