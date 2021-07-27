@@ -42,12 +42,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .deleteCookies("JSESSIONID")
                 .invalidateHttpSession(true)
                 .logoutSuccessUrl("/index")
-
-//                .and()
-//                .sessionManagement()
-//                .maximumSessions(1)
-//                .maxSessionsPreventsLogin(false)
-//                .expiredUrl("/index")
         ;
     }
 }
