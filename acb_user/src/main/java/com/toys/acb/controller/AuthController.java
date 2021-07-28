@@ -5,6 +5,7 @@ import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.LoginForm;
 import com.toys.acb.dto.PasswordForm;
 import com.toys.acb.dto.Result;
+import com.toys.acb.dto.UserDto;
 import com.toys.acb.entity.SysUser;
 import com.toys.acb.service.AuthService;
 import io.swagger.annotations.ApiOperation;
@@ -40,9 +41,6 @@ public class AuthController {
     private AuthService authService;
 
     @Autowired
-    private UserDetailsService userDetailsService;
-
-    @Autowired
     private SessionUtil sessionUtil;
 
     @ApiOperation("用户登录")
@@ -51,27 +49,25 @@ public class AuthController {
         String username = loginForm.getUsername();
         String password = loginForm.getPassword();
 
-        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        if (!passwordEncoder.matches(password, userDetails.getPassword())) {
-            return Result.error(ResultCode.USER_CREDENTIALS_ERROR);
+        UserDto userDto = authService.login(username);
+        if (userDto == null) {
+            return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
 
+        UserDetails userDetails = userDto.getUserDetails();
+        if (!authService.verifyPassword(password, userDetails.getPassword())) {
+            return Result.error(ResultCode.USER_CREDENTIALS_ERROR);
+        }
         if (!userDetails.isEnabled()) {
             return Result.error(ResultCode.USER_ACCOUNT_LOCKED);
         }
-
-        Long userId = authService.login(username);
-        if (userId == null) {
-            return Result.error(ResultCode.USER_ACCOUNT_NOT_EXIST);
-        }
-
-        request.getSession().setAttribute("userId", userId);
-        request.getSession().setMaxInactiveInterval(600); //过期时间
 
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         sessionUtil.login(username, request.getSession());
+        request.getSession().setAttribute("userId", userDto.getId());
+        request.getSession().setMaxInactiveInterval(600); //会话过期时间
 
         LOGGER.info("用户登录成功：{}", username);
         return Result.ok().message("登录成功");

@@ -450,3 +450,43 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.se
 23:35:31.185 [http-nio-12358-exec-5] INFO  com.toys.acb.component.SessionUtil - 用户被挤占下线：sessionId=DC215007565B596A92C5CA41BFE12E1D
 23:35:31.185 [http-nio-12358-exec-5] INFO  com.toys.acb.component.SessionUtil - 用户登录成功：username=Tom, sessionId=EB2D1F32740DBDA155310D579B60BDC7
 23:35:31.186 [http-nio-12358-exec-5] INFO  c.toys.acb.controller.AuthController - 用户登录成功：Tom
+23:37:51.168 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+23:37:51.170 [main] INFO  com.toys.acb.UserApplication - Starting UserApplication using Java 15.0.2 on DESKTOP-2D7JFDC with PID 10476 (F:\Program\java_work\ACB\acb_user\target\classes started by CKD in F:\Program\java_work\ACB)
+23:37:51.172 [main] INFO  com.toys.acb.UserApplication - No active profile set, falling back to default profiles: default
+23:37:52.422 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+23:37:52.424 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:37:52.455 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+23:37:52.825 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4d705112' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:37:52.833 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:37:53.075 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 12358 (http)
+23:37:53.084 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-12358"]
+23:37:53.085 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:37:53.085 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.46]
+23:37:53.201 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:37:53.201 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1964 ms
+23:37:53.861 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+23:37:54.113 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+23:37:54.114 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+23:37:54.152 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c3ab672, org.springframework.security.web.context.SecurityContextPersistenceFilter@6906be0f, org.springframework.security.web.header.HeaderWriterFilter@e706aa, org.springframework.security.web.authentication.logout.LogoutFilter@738a39cc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@713e7d9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@edbc2bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52d63b7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e6acec2, org.springframework.security.web.session.SessionManagementFilter@16fc5622, org.springframework.security.web.access.ExceptionTranslationFilter@3a709cc7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70f98f7a]
+23:37:54.616 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:37:54.884 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:37:55.025 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-12358"]
+23:37:55.054 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 12358 (http) with context path ''
+23:37:55.055 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+23:37:55.084 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+23:37:55.129 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+23:37:55.393 [main] INFO  com.toys.acb.UserApplication - Started UserApplication in 4.934 seconds (JVM running for 6.633)
+23:37:57.525 [http-nio-12358-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:37:57.525 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:37:57.526 [http-nio-12358-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+23:37:57.918 [http-nio-12358-exec-1] INFO  c.t.acb.service.impl.AuthServiceImpl - login success：username=Tom
+23:37:57.960 [http-nio-12358-exec-1] INFO  com.toys.acb.component.SessionUtil - 用户登录成功：username=Tom, sessionId=C98646F56AA65F2BE9C0DA8ECD30D22C
+23:37:57.960 [http-nio-12358-exec-1] INFO  c.toys.acb.controller.AuthController - 用户登录成功：Tom
+23:38:03.677 [http-nio-12358-exec-2] INFO  c.t.acb.service.impl.AuthServiceImpl - login success：username=Tom
+23:38:03.678 [http-nio-12358-exec-2] INFO  com.toys.acb.component.SessionUtil - 用户被挤占下线：sessionId=C98646F56AA65F2BE9C0DA8ECD30D22C
+23:38:03.678 [http-nio-12358-exec-2] INFO  com.toys.acb.component.SessionUtil - 用户登录成功：username=Tom, sessionId=93D047C6537B0E509993440C999957EC
+23:38:03.678 [http-nio-12358-exec-2] INFO  c.toys.acb.controller.AuthController - 用户登录成功：Tom
+23:38:14.979 [http-nio-12358-exec-6] INFO  c.t.acb.service.impl.AuthServiceImpl - login success：username=Tom
+23:38:14.980 [http-nio-12358-exec-6] INFO  com.toys.acb.component.SessionUtil - 用户被挤占下线：sessionId=93D047C6537B0E509993440C999957EC
+23:38:14.980 [http-nio-12358-exec-6] INFO  com.toys.acb.component.SessionUtil - 用户登录成功：username=Tom, sessionId=8081F34F0E3219280A7D997617F050FB
+23:38:14.980 [http-nio-12358-exec-6] INFO  c.toys.acb.controller.AuthController - 用户登录成功：Tom
