@@ -51,6 +51,7 @@ public class AuthController {
 
         UserDto userDto = authService.login(username);
         if (userDto == null) {
+            LOGGER.info("System throws exception, created a null UserDto.");
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -59,6 +60,7 @@ public class AuthController {
             return Result.error(ResultCode.USER_CREDENTIALS_ERROR);
         }
         if (!userDetails.isEnabled()) {
+            LOGGER.info("User is locked: username={}", username);
             return Result.error(ResultCode.USER_ACCOUNT_LOCKED);
         }
 
