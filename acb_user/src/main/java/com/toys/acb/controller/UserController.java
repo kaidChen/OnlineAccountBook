@@ -14,6 +14,9 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.List;
 
 @RestController
@@ -27,8 +30,8 @@ public class UserController {
     @ApiOperation("获取用户当前周预算周期的所有账单")
     @PreAuthorize("hasAnyRole('user')")
     @GetMapping("/bill/list")
-    public Result getBillList(@RequestParam(value = "page", defaultValue = "1") Integer page,
-                              @RequestParam(value = "size", defaultValue = "10") Integer size) {
+    public Result getBillList(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
+                              @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size) {
         if (page <= 0 || size <= 0 || size > 50) {
             return Result.error(ResultCode.PARAM_NOT_VALID);
         }
@@ -43,8 +46,8 @@ public class UserController {
     @ApiOperation("获取用户指定周期的所有账单")
     @PreAuthorize("hasAnyRole('user')")
     @GetMapping("/bill/cycle_list")
-    public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "1") Integer page,
-                                     @RequestParam(value = "size", defaultValue = "10") Integer size,
+    public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
+                                     @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size,
                                      @RequestParam("cycle") Long cycle) {
         if (page <= 0 || size <= 0 || size > 50 || cycle <= 0) {
             return Result.error(ResultCode.PARAM_NOT_VALID);
@@ -60,8 +63,8 @@ public class UserController {
     @ApiOperation("获取用户指定类型的账单")
     @PreAuthorize("hasAnyRole('user')")
     @GetMapping("/bill/type_list")
-    public Result getBillListByTypeId(@RequestParam(value = "page", defaultValue = "1") Integer page,
-                                      @RequestParam(value = "size", defaultValue = "10") Integer size,
+    public Result getBillListByTypeId(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
+                                      @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size,
                                       @RequestParam("id") Long id) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
@@ -74,7 +77,7 @@ public class UserController {
     @ApiOperation("添加账单")
     @PreAuthorize("hasAnyRole('user')")
     @PostMapping("/bill")
-    public Result addBill(@RequestBody Bill bill) {
+    public Result addBill(@RequestBody @Valid Bill bill) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
@@ -90,7 +93,7 @@ public class UserController {
     @ApiOperation("更新账单")
     @PreAuthorize("hasAnyRole('user')")
     @PutMapping("bill")
-    public Result updateBill(@RequestBody Bill bill) {
+    public Result updateBill(@RequestBody @Valid Bill bill) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
@@ -133,7 +136,7 @@ public class UserController {
     @ApiOperation("添加账单类型")
     @PreAuthorize("hasAnyRole('user')")
     @PostMapping("/type")
-    public Result addType(@RequestBody Type type) {
+    public Result addType(@RequestBody @Valid Type type) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
@@ -152,7 +155,7 @@ public class UserController {
     @ApiOperation("更新账单类型")
     @PreAuthorize("hasAnyRole('user')")
     @PutMapping("/type")
-    public Result updateType(@RequestBody Type type) {
+    public Result updateType(@RequestBody @Valid Type type) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
@@ -168,7 +171,7 @@ public class UserController {
     @ApiOperation("删除账单类型")
     @PreAuthorize("hasAnyRole('user')")
     @DeleteMapping("/type")
-    public Result deleteType(@RequestParam("id") Long id) {
+    public Result deleteType(@RequestParam("id") @Min(1) @Max(Long.MAX_VALUE) Long id) {
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
