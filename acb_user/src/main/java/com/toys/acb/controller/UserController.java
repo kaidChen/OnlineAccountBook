@@ -29,7 +29,7 @@ public class UserController {
 
     @ApiOperation("获取用户当前周预算周期的所有账单")
     @PreAuthorize("hasAnyRole('user')")
-    @GetMapping("/bill/list")
+    @GetMapping("/bill/cur_list")
     public Result getBillList(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
                               @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size) {
         if (page <= 0 || size <= 0 || size > 50) {
@@ -43,36 +43,45 @@ public class UserController {
         return Result.ok().addDate("page_info", billPage);
     }
 
-    @ApiOperation("获取用户指定周期的所有账单")
+    @ApiOperation("获取用户指定条件的所有账单")
     @PreAuthorize("hasAnyRole('user')")
-    @GetMapping("/bill/cycle_list")
+    @GetMapping("/bill/cond_list")
     public Result getBillListByCycle(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
                                      @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size,
-                                     @RequestParam("cycle") Long cycle) {
-        if (page <= 0 || size <= 0 || size > 50 || cycle <= 0) {
+                                     @RequestParam(value = "type_id", defaultValue = "") String typeIdStr,
+                                     @RequestParam(value = "cycle", defaultValue = "") String cycleStr) {
+        if (page <= 0 || size <= 0 || size > 50) {
             return Result.error(ResultCode.PARAM_NOT_VALID);
         }
         Long userId = (Long) request.getSession().getAttribute("userId");
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        PageInfo<BillDetail> billPage = userService.getBillListByCycle(page, size, cycle, userId);
+
+        Long cycle = null, typeId = null;
+        try {
+            if (!cycleStr.equals(""))  cycle = Long.parseLong(cycleStr);
+            if (!typeIdStr.equals(""))  typeId = Long.parseLong(typeIdStr);
+        } catch (Exception e) {
+            return Result.error(ResultCode.PARAM_TYPE_ERROR);
+        }
+        PageInfo<BillDetail> billPage = userService.getBillListWithCond(page, size, userId, cycle, typeId);
         return Result.ok().addDate("page_info", billPage);
     }
 
-    @ApiOperation("获取用户指定类型的账单")
-    @PreAuthorize("hasAnyRole('user')")
-    @GetMapping("/bill/type_list")
-    public Result getBillListByTypeId(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
-                                      @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size,
-                                      @RequestParam("id") Long id) {
-        Long userId = (Long) request.getSession().getAttribute("userId");
-        if (userId == null) {
-            return Result.error(ResultCode.USER_NOT_LOGIN);
-        }
-        PageInfo<BillDetail> billPage = userService.getBillListByTypeId(page, size, id, userId);
-        return Result.ok().addDate("page_info", billPage);
-    }
+//    @ApiOperation("获取用户指定类型的账单")
+//    @PreAuthorize("hasAnyRole('user')")
+//    @GetMapping("/bill/type_list")
+//    public Result getBillListByTypeId(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
+//                                      @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size,
+//                                      @RequestParam("id") Long id) {
+//        Long userId = (Long) request.getSession().getAttribute("userId");
+//        if (userId == null) {
+//            return Result.error(ResultCode.USER_NOT_LOGIN);
+//        }
+//        PageInfo<BillDetail> billPage = userService.getBillListByTypeId(page, size, id, userId);
+//        return Result.ok().addDate("page_info", billPage);
+//    }
 
     @ApiOperation("添加账单")
     @PreAuthorize("hasAnyRole('user')")
