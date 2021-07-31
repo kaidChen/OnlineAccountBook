@@ -11,10 +11,6 @@ import java.util.List;
 public interface UserService {
     PageInfo<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId);
 
-//    PageInfo<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId);
-//
-//    PageInfo<BillDetail> getBillListByTypeId(Integer page, Integer size, Long typeId, Long userId);
-
     PageInfo<BillDetail> getBillListWithCond(Integer page, Integer size, Long userId, Long cycle, Long typeId);
 
     int addBill(Bill bill);

@@ -66,54 +66,6 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-//    @Override
-//    public PageInfo<BillDetail> getBillListByCycle(Integer page, Integer size, Long cycle, Long userId) {
-//        SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
-//                .from(bill)
-//                .leftJoin(type)
-//                .on(bill.typeId, equalTo(type.id))
-//                .where(bill.userId, isEqualTo(userId),
-//                        and(bill.cycle, isEqualTo(cycle)))
-//                .orderBy(bill.time.descending())
-//                .build()
-//                .render(RenderingStrategies.MYBATIS3);
-//
-//        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-//            BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
-//            PageHelper.startPage(page, size);
-//            List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
-//            LOGGER.info("getBillListByCycle: page={}, size={}, cycle={}, userId={}", page, size, cycle, userId);
-//            return new PageInfo<>(billDetailList);
-//        } catch (Exception e) {
-//            LOGGER.error("error at getBillListByCycle: {}", e.getMessage());
-//        }
-//        return null;
-//    }
-//
-//    @Override
-//    public PageInfo<BillDetail> getBillListByTypeId(Integer page, Integer size, Long typeId, Long userId) {
-//        SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, type.name, type.kind)
-//                .from(bill)
-//                .leftJoin(type)
-//                .on(bill.typeId, equalTo(type.id))
-//                .where(bill.userId, isEqualTo(userId),
-//                        and(bill.typeId, isEqualTo(typeId)))
-//                .orderBy(bill.time.descending())
-//                .build()
-//                .render(RenderingStrategies.MYBATIS3);
-//
-//        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-//            BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
-//            PageHelper.startPage(page, size);
-//            List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
-//            LOGGER.info("getBillListByTypeId: page={}, size={}, typeId={}, userId={}", page, size, typeId, userId);
-//            return new PageInfo<>(billDetailList);
-//        } catch (Exception e) {
-//            LOGGER.error("error at getBillListByTypeId: {}", e.getMessage());
-//        }
-//        return null;
-//    }
-
     @Override
     public PageInfo<BillDetail> getBillListWithCond(Integer page, Integer size, Long userId, Long cycle, Long typeId) {
         QueryExpressionDSL<SelectModel>.QueryExpressionWhereBuilder whereSql =
