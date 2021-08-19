@@ -296,4 +296,17 @@ public class UserServiceImpl implements UserService {
         }
         return rows;
     }
+
+    @Override
+    public int updateCycle(Long inc, Long userId) {
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            String sql = String.format("update sys_user set cycle = cycle+%d where id = %d", inc, userId);
+            sqlSession.getConnection().prepareStatement(sql).execute();
+            LOGGER.info("updateCycle: inc={}, suerId={}", inc, userId);
+            return 1;
+        } catch (Exception e) {
+            LOGGER.error("error at updateCycle: {}", e.getMessage());
+            return -1;
+        }
+    }
 }

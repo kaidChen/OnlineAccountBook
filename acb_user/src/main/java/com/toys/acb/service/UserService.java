@@ -31,4 +31,5 @@ public interface UserService {
 
     int updateNickname(String nickname, Long userId);
 
+    int updateCycle(Long inc, Long userId);
 }

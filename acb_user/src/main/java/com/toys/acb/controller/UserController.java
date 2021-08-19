@@ -9,6 +9,7 @@ import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
 import com.toys.acb.service.UserService;
 import io.swagger.annotations.ApiOperation;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -60,28 +61,14 @@ public class UserController {
 
         Long cycle = null, typeId = null;
         try {
-            if (!cycleStr.equals(""))  cycle = Long.parseLong(cycleStr);
-            if (!typeIdStr.equals(""))  typeId = Long.parseLong(typeIdStr);
+            if (!cycleStr.equals("")) cycle = Long.parseLong(cycleStr);
+            if (!typeIdStr.equals("")) typeId = Long.parseLong(typeIdStr);
         } catch (Exception e) {
             return Result.error(ResultCode.PARAM_TYPE_ERROR);
         }
         PageInfo<BillDetail> billPage = userService.getBillListWithCond(page, size, userId, cycle, typeId);
         return Result.ok().addDate("page_info", billPage);
     }
-
-//    @ApiOperation("获取用户指定类型的账单")
-//    @PreAuthorize("hasAnyRole('user')")
-//    @GetMapping("/bill/type_list")
-//    public Result getBillListByTypeId(@RequestParam(value = "page", defaultValue = "1") @Min(1) @Max(Integer.MAX_VALUE) Integer page,
-//                                      @RequestParam(value = "size", defaultValue = "10") @Min(1) @Max(50) Integer size,
-//                                      @RequestParam("id") Long id) {
-//        Long userId = (Long) request.getSession().getAttribute("userId");
-//        if (userId == null) {
-//            return Result.error(ResultCode.USER_NOT_LOGIN);
-//        }
-//        PageInfo<BillDetail> billPage = userService.getBillListByTypeId(page, size, id, userId);
-//        return Result.ok().addDate("page_info", billPage);
-//    }
 
     @ApiOperation("添加账单")
     @PreAuthorize("hasAnyRole('user')")
@@ -205,5 +192,35 @@ public class UserController {
             return Result.error().message("获取用户信息失败");
         }
         return Result.ok().addDate("user", user);
+    }
+
+    @ApiOperation("修改昵称")
+    @PreAuthorize("hasAnyRole('user')")
+    @GetMapping("/nickname")
+    public Result updateNickname(@Length(min = 4, max = 16) @RequestParam("nickname") String nickname) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
+            return Result.error(ResultCode.USER_NOT_LOGIN);
+        }
+        int rows = userService.updateNickname(nickname, userId);
+        if (rows < 0) {
+            return Result.error(ResultCode.SYSTEM_EXCEPTION);
+        }
+        return Result.ok().message(String.format("增添%d条数据", rows));
+    }
+
+    @ApiOperation("修改周期")
+    @PreAuthorize("hasAnyRole('user')")
+    @GetMapping("/cycle")
+    public Result updateCycle(@Min(-1) @Max(1) @RequestParam("inc") Long inc) {
+        Long userId = (Long) request.getSession().getAttribute("userId");
+        if (userId == null) {
+            return Result.error(ResultCode.USER_NOT_LOGIN);
+        }
+        int rows = userService.updateCycle(inc, userId);
+        if (rows < 0) {
+            return Result.error(ResultCode.SYSTEM_EXCEPTION);
+        }
+        return Result.ok().message(String.format("增添%d条数据", rows));
     }
 }

@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// 不要轻易执行
 public class CodeGenerator {
     public static void main(String[] args) throws Exception {
         //MBG 执行过程中的警告信息
