@@ -1,9 +1,9 @@
-package com.toys.acb.model;
+package com.toys.acb.dao;
 
 import lombok.Data;
 
 @Data
-public class SysRole {
+public class SysRolePo {
     private Long id;
     private Long userId;
     private String code;

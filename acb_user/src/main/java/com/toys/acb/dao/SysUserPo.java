@@ -1,11 +1,11 @@
-package com.toys.acb.model;
+package com.toys.acb.dao;
 
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class SysUser {
+public class SysUserPo {
     private Long id;
     private String username;
     private String nickname;
