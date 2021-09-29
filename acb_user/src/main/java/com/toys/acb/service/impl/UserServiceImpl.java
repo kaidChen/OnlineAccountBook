@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.constant.DbCode;
-import com.toys.acb.dto.BillDetail;
+import com.toys.acb.dto.BillDto;
 import com.toys.acb.entity.Bill;
 import com.toys.acb.entity.SysUser;
 import com.toys.acb.entity.Type;
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
     private SqlSessionBuilder sqlSessionBuilder;
 
     @Override
-    public PageInfo<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId) {
+    public PageInfo<BillDto> getCurrentBillList(Integer page, Integer size, Long userId) {
         SelectStatementProvider selectStatementProvider = select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, bill.typeId, type.name, type.kind)
                 .from(bill)
                 .leftJoin(type)
@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
             PageHelper.startPage(page, size);
-            List<BillDetail> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
+            List<BillDto> billDetailList = billDetailMapper.selectMany(selectStatementProvider);
             LOGGER.info("getCurrentBillList: page={}, size={}, userId={}", page, size, userId);
             return new PageInfo<>(billDetailList);
         } catch (Exception e) {
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public PageInfo<BillDetail> getBillListWithCond(Integer page, Integer size, Long userId, Long cycle, Long typeId) {
+    public PageInfo<BillDto> getBillListWithCond(Integer page, Integer size, Long userId, Long cycle, Long typeId) {
         QueryExpressionDSL<SelectModel>.QueryExpressionWhereBuilder whereSql =
                 select(bill.id, bill.cost, bill.note, bill.time, bill.cycle, bill.source, bill.typeId, type.name, type.kind)
                         .from(bill)
@@ -88,7 +88,7 @@ public class UserServiceImpl implements UserService {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillDetailMapper billDetailMapper = sqlSession.getMapper(BillDetailMapper.class);
             PageHelper.startPage(page, size);
-            List<BillDetail> billDetailList = billDetailMapper.selectMany(render);
+            List<BillDto> billDetailList = billDetailMapper.selectMany(render);
             LOGGER.info("getBillListByTypeId: page={}, size={}, typeId={}, cycle={}, userId={}", page, size, typeId, cycle, userId);
 
             return new PageInfo<>(billDetailList);

@@ -1,35 +1,30 @@
 package com.toys.acb.service;
 
-import com.github.pagehelper.PageInfo;
-import com.toys.acb.dto.BillDetail;
-import com.toys.acb.entity.Bill;
-import com.toys.acb.entity.SysUser;
-import com.toys.acb.entity.Type;
+import com.toys.acb.dto.BillDto;
+import com.toys.acb.dto.BillTypeDto;
 
 import java.util.List;
 
 public interface UserService {
-    PageInfo<BillDetail> getCurrentBillList(Integer page, Integer size, Long userId);
+    Integer createBill(BillDto billDto);
 
-    PageInfo<BillDetail> getBillListWithCond(Integer page, Integer size, Long userId, Long cycle, Long typeId);
+    Integer invalidateBill(BillDto billDto);
 
-    int addBill(Bill bill);
+    Integer deleteBill(BillDto billDto);
 
-    int updateBill(Bill bill);
+    Integer updateBill(BillDto billDto);
 
-    int deleteBill(Long bid, Long userId);
+    BillDto getBill(BillDto billDto);
 
-    List<Type> getTypeList(Long userId);
+    List<BillDto> getBillList(BillDto billDto);
 
-    int addType(Type type);
+    Integer createBillType(BillTypeDto billTypeDto);
 
-    int updateType(Type type);
+    Integer invalidateBillType(BillTypeDto billTypeDto);
 
-    int deleteType(Long tid, Long userId);
+    Integer updateBillType(BillTypeDto billTypeDto);
 
-    SysUser getUserByUserId(Long userId);
+    BillTypeDto getBillType(BillTypeDto billTypeDto);
 
-    int updateNickname(String nickname, Long userId);
-
-    int updateCycle(Long inc, Long userId);
+    List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto);
 }

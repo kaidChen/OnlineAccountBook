@@ -48,6 +48,8 @@ public class BillTypeDao {
                 .set(name).equalToWhenPresent(record::getName)
                 .set(kind).equalToWhenPresent(record::getKind)
                 .set(status).equalToWhenPresent(record::getStatus)
+                .where(id, isEqualTo(record.getId()),
+                        and(userId, isEqualTo(record.getUserId())))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 

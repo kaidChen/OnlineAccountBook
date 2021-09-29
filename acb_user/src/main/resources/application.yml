@@ -7,9 +7,6 @@ spring:
 
 server:
   port: 12358
-#  servlet:
-#    session:
-#      timeout: 10s
 
 pagehelper:
   helper-dialect: mysql

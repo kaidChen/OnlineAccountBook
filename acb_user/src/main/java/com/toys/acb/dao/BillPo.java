@@ -31,6 +31,7 @@ public class BillPo {
 
     public Bill parseToDbEntity() {
         Bill bill = new Bill();
+        bill.setId(getId());
         bill.setUserId(getUserId());
         bill.setTypeId(getTypeId());
         bill.setStatus(getStatus());

@@ -1,6 +1,7 @@
 package com.toys.acb.dao;
 
 import com.toys.acb.component.SqlSessionBuilder;
+import com.toys.acb.constant.DbCode;
 import com.toys.acb.entity.Bill;
 import com.toys.acb.mapper.BillMapper;
 import org.apache.ibatis.session.SqlSession;
@@ -51,7 +52,8 @@ public class BillDao {
     public Integer deleteBill(BillPo record) {
         DeleteStatementProvider stmt = deleteFrom(bill)
                 .where(id, isEqualTo(record::getId),
-                        and(userId, isEqualTo(record::getUserId)))
+                        and(userId, isEqualTo(record::getUserId)),
+                        and(status, isEqualTo(DbCode.BillStatusInvalid)))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 

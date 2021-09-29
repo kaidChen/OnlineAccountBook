@@ -44,7 +44,7 @@ CREATE TABLE sys_user
     login_at   TIMESTAMP       NULL,
 
     PRIMARY KEY (id),
-    UNIQUE INDEX uniq_username (username) VISIBLE
+    UNIQUE INDEX uniq_username (username)
 ) COMMENT '用户表';
 
 DROP TABLE IF EXISTS sys_role;

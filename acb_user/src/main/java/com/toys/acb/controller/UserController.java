@@ -2,7 +2,7 @@ package com.toys.acb.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.toys.acb.constant.ResultCode;
-import com.toys.acb.dto.BillDetail;
+import com.toys.acb.dto.BillDto;
 import com.toys.acb.dto.Result;
 import com.toys.acb.entity.Bill;
 import com.toys.acb.entity.SysUser;
@@ -40,7 +40,7 @@ public class UserController {
         if (userId == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        PageInfo<BillDetail> billPage = userService.getCurrentBillList(page, size, userId);
+        PageInfo<BillDto> billPage = userService.getCurrentBillList(page, size, userId);
         return Result.ok().addDate("page_info", billPage);
     }
 
@@ -66,7 +66,7 @@ public class UserController {
         } catch (Exception e) {
             return Result.error(ResultCode.PARAM_TYPE_ERROR);
         }
-        PageInfo<BillDetail> billPage = userService.getBillListWithCond(page, size, userId, cycle, typeId);
+        PageInfo<BillDto> billPage = userService.getBillListWithCond(page, size, userId, cycle, typeId);
         return Result.ok().addDate("page_info", billPage);
     }
 
