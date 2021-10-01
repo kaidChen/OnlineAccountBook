@@ -15,6 +15,6 @@ public class SysUserDto {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime loginAt;
-    private List<SysRoleDto> roleList;
+    private List<SysRoleDto> roles;
 }
 

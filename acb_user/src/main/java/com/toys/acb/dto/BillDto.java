@@ -14,6 +14,6 @@ public class BillDto {
     private BigDecimal cost;
     private Integer status;
     private String note;
-    private BillDto billType;
+    private BillTypeDto billType;
 }
 
