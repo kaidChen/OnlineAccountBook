@@ -1,5 +1,10 @@
 package com.toys.acb.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.toys.acb.dao.BillPo;
 import com.toys.acb.dao.BillTypePo;
 import lombok.Data;
@@ -12,6 +17,10 @@ public class BillDto {
     private Long id;
     private Long userId;
     private Long typeId;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate createdAt;
     private BigDecimal cost;
     private Integer status;

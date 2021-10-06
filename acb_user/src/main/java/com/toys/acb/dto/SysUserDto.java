@@ -1,5 +1,10 @@
 package com.toys.acb.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.toys.acb.dao.SysRolePo;
 import com.toys.acb.dao.SysUserPo;
 import lombok.Data;
@@ -16,10 +21,22 @@ public class SysUserDto {
     private String password;
     private String newPassw;
     private Integer status;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private LocalDateTime loginAt;
     private List<SysRoleDto> roles;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    private LocalDateTime createdAt;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    private LocalDateTime updatedAt;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    private LocalDateTime loginAt;
 
     public void parseFromPo(SysUserPo user, List<SysRolePo> roles) {
         if (user != null) {
@@ -39,7 +56,7 @@ public class SysUserDto {
                 roleDto.parseFromPo(role);
                 roleList.add(roleDto);
             }
-            if (roleList != null) {
+            if (!roleList.isEmpty()) {
                 setRoles(roleList);
             }
         }

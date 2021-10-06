@@ -79,8 +79,7 @@ public class SysRoleDao {
     public List<SysRolePo> getSysRoleList(SysRolePo record) {
         SelectStatementProvider stmt = select(sysRole.allColumns())
                 .from(sysRole)
-                .where(id, isEqualTo(record::getId),
-                        and(userId, isEqualTo(record::getUserId)),
+                .where(userId, isEqualTo(record::getUserId),
                         and(code, isEqualToWhenPresent(record::getCode)),
                         and(name, isEqualToWhenPresent(record::getName)))
                 .build()
