@@ -7,4 +7,6 @@ public interface AuthService {
     SysUserDto login(SysUserDto sysUser);
 
     Integer updatePassword(SysUserDto sysUser);
+
+    Boolean matchPassword(String rawWord, String encodedWord);
 }

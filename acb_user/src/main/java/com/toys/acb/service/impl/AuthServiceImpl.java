@@ -20,9 +20,6 @@ public class AuthServiceImpl implements AuthService {
     private final static Logger LOGGER = LoggerFactory.getLogger(AuthServiceImpl.class);
 
     @Autowired
-    private SqlSessionBuilder sqlSessionBuilder;
-
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Autowired
@@ -38,16 +35,13 @@ public class AuthServiceImpl implements AuthService {
             user.setUsername(sysUser.getUsername());
             user = sysUserDao.getSysUser(user);
             if (user != null) {
-                boolean match = passwordEncoder.matches(sysUser.getPassword(), user.getPassword());
-                if (match) {
-                    SysRolePo roles = new SysRolePo();
-                    roles.setUserId(user.getId());
-                    List<SysRolePo> sysRoleList = sysRoleDao.getSysRoleList(roles);
+                SysRolePo roles = new SysRolePo();
+                roles.setUserId(user.getId());
+                List<SysRolePo> sysRoleList = sysRoleDao.getSysRoleList(roles);
 
-                    SysUserDto userDto = new SysUserDto();
-                    userDto.parseFromPo(user, sysRoleList);
-                    return userDto;
-                }
+                SysUserDto userDto = new SysUserDto();
+                userDto.parseFromPo(user, sysRoleList);
+                return userDto;
             }
         } catch (Exception e) {
             LOGGER.error("{}", e.getMessage());
@@ -58,22 +52,19 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public Integer updatePassword(SysUserDto sysUser) {
         try {
-            SysUserPo user = new SysUserPo();
-            user.setUsername(sysUser.getUsername());
-            user = sysUserDao.getSysUser(user);
-            if (user != null) {
-                boolean match = passwordEncoder.matches(sysUser.getPassword(), user.getPassword());
-                if (match) {
-                    String encodePW = passwordEncoder.encode(sysUser.getNewPassw());
-                    SysUserPo userForUpdate = new SysUserPo();
-                    userForUpdate.setId(sysUser.getId());
-                    userForUpdate.setPassword(encodePW);
-                    return sysUserDao.updateSysUser(userForUpdate);
-                }
-            }
+            String encodePW = passwordEncoder.encode(sysUser.getPassword());
+            SysUserPo userForUpdate = new SysUserPo();
+            userForUpdate.setId(sysUser.getId());
+            userForUpdate.setPassword(encodePW);
+            return sysUserDao.updateSysUser(userForUpdate);
         } catch (Exception e) {
             LOGGER.error("{}", e.getMessage());
         }
         return null;
+    }
+
+    @Override
+    public Boolean matchPassword(String rawWord, String encodedWord) {
+        return passwordEncoder.matches(rawWord, encodedWord);
     }
 }

@@ -5,9 +5,14 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import com.toys.acb.constant.DbCode;
 import com.toys.acb.dao.SysRolePo;
 import com.toys.acb.dao.SysUserPo;
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -19,7 +24,6 @@ public class SysUserDto {
     private String username;
     private String nickname;
     private String password;
-    private String newPassw;
     private Integer status;
     private List<SysRoleDto> roles;
 
@@ -60,6 +64,23 @@ public class SysUserDto {
                 setRoles(roleList);
             }
         }
+    }
+
+    public UserDetails createUserDetails() {
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        for (SysRoleDto role : getRoles()) {
+            GrantedAuthority simple = new SimpleGrantedAuthority(role.getCode());
+            authorities.add(simple);
+        }
+
+        return new User(getUsername(),
+                getPassword(),
+                true,
+                true,
+                true,
+                getStatus().equals(DbCode.SysUserStatusUnlocked),
+                authorities
+        );
     }
 }
 

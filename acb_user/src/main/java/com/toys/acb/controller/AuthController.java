@@ -2,11 +2,10 @@ package com.toys.acb.controller;
 
 import com.toys.acb.component.SessionUtil;
 import com.toys.acb.constant.ResultCode;
-import com.toys.acb.dto.LoginForm;
-import com.toys.acb.dto.PasswordForm;
 import com.toys.acb.dto.Result;
-import com.toys.acb.dto.UserDto;
-import com.toys.acb.entity.SysUser;
+import com.toys.acb.dto.SysUserDto;
+import com.toys.acb.request.LoginReq;
+import com.toys.acb.request.UpdatePasswordReq;
 import com.toys.acb.service.AuthService;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -28,6 +27,7 @@ import javax.validation.Valid;
 @RestController
 public class AuthController {
     private final static Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
+    private final static String SessionAttributeUser = "user";
 
     @Autowired
     private HttpServletRequest request;
@@ -40,22 +40,25 @@ public class AuthController {
 
     @ApiOperation("用户登录")
     @PostMapping("/login")
-    public Result login(@RequestBody @Valid LoginForm loginForm) {
-        String username = loginForm.getUsername();
-        String password = loginForm.getPassword();
+    public Result login(@RequestBody @Valid LoginReq req) {
+        String username = req.getUsername();
+        String password = req.getPassword();
 
-        UserDto userDto = authService.login(username);
+        SysUserDto userDto = new SysUserDto();
+        userDto.setUsername(username);
+        userDto.setPassword(password);
+        userDto = authService.login(userDto);
+
         if (userDto == null) {
-            LOGGER.info("System throws exception, created a null UserDto.");
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
 
-        UserDetails userDetails = userDto.getUserDetails();
-        if (!authService.verifyPassword(password, userDetails.getPassword())) {
+        UserDetails userDetails = userDto.createUserDetails();
+
+        if (!authService.matchPassword(password, userDetails.getPassword())) {
             return Result.error(ResultCode.USER_CREDENTIALS_ERROR);
         }
-        if (!userDetails.isEnabled()) {
-            LOGGER.info("User is locked: username={}", username);
+        if (!userDetails.isAccountNonLocked()) {
             return Result.error(ResultCode.USER_ACCOUNT_LOCKED);
         }
 
@@ -63,8 +66,8 @@ public class AuthController {
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         sessionUtil.login(username, request.getSession());
-        request.getSession().setAttribute("userId", userDto.getId());
-        request.getSession().setMaxInactiveInterval(600); //会话过期时间
+
+        request.getSession().setAttribute(SessionAttributeUser, userDto);
 
         LOGGER.info("用户登录成功：{}", username);
         return Result.ok().message("登录成功");
@@ -73,69 +76,57 @@ public class AuthController {
     @ApiOperation("注册账号")
     @PreAuthorize("hasAnyRole('admin')")
     @PutMapping("/signup")
-    public Result signup(@RequestBody @Valid SysUser sysUser) {
-        Long userId = (Long) request.getSession().getAttribute("userId");
-        if (userId == null) {
+    public Result signup() {
+        SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
+
+        if (user == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
-        int rows = authService.signup(sysUser);
-        if (rows < 0) {
-            LOGGER.info("注册账号失败，管理员id：{}", userId);
-            return Result.error().message("创建用户失败");
-        }
-        LOGGER.info("注册账号成功，管理员id：{}，用户id：{}", userId, sysUser.getId());
-        return Result.ok().message("注册成功");
+
+        return null;
     }
 
     @ApiOperation("修改自己的密码")
     @PreAuthorize("hasAnyRole('admin', 'user')")
-    @PutMapping("update_pw")
-    public Result updatePassword(@RequestBody @Valid PasswordForm passwordForm) {
-        Long userId = (Long) request.getSession().getAttribute("userId");
-        if (userId == null) {
+    @PutMapping("update_password")
+    public Result updatePassword(@RequestBody @Valid UpdatePasswordReq req) {
+        SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
+
+        if (user == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
 
-        String oldPW = passwordForm.getOldPassword();
-        String newPW = passwordForm.getNewPassword();
-        int rows = authService.updatePassword(oldPW, newPW, userId);
-        if (rows < 0) {
-            if (rows == -2) {
-                LOGGER.info("修改密码失败，用户不存在：user_id={}", userId);
-                return Result.error(ResultCode.USER_ACCOUNT_NOT_EXIST);
-            }
+        String oldPW = req.getOldPassword();
+        String newPW = req.getNewPassword();
 
-            if (rows == -3) {
-                LOGGER.info("修改密码失败，密码错误：user_id={}", userId);
-                return Result.error(ResultCode.USER_CREDENTIALS_ERROR);
-            }
+        if (!authService.matchPassword(oldPW, user.getPassword())) {
+            return Result.error(ResultCode.USER_CREDENTIALS_ERROR);
+        }
 
-            LOGGER.info("修改密码失败：user_id={}", userId);
+        SysUserDto newUser = new SysUserDto();
+        newUser.setId(user.getId());
+        newUser.setPassword(newPW);
+        Integer rows = authService.updatePassword(newUser);
+        if (rows == null) {
             return Result.error(ResultCode.SYSTEM_EXCEPTION);
         }
 
-        LOGGER.info("修改密码成功，用户id：{}", userId);
-        return Result.ok().message("修改成功");
+        request.getSession().invalidate();
+
+        LOGGER.info("修改密码成功，用户：{}", user.getUsername());
+        return Result.ok().message("修改成功，请重新登录");
     }
 
-    @ApiOperation("管理员修改用户的密码")
+    @ApiOperation("管理员修改用户信息")
     @PreAuthorize("hasAnyRole('admin')")
-    @PutMapping("/update_userpw")
-    public Result updateUserPassword(@RequestBody @Valid PasswordForm passwordForm) {
-        Long userId = (Long) request.getSession().getAttribute("userId");
-        if (userId == null) {
+    @PutMapping("/update_user")
+    public Result updateUserPassword() {
+        SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
+
+        if (user == null) {
             return Result.error(ResultCode.USER_NOT_LOGIN);
         }
 
-        String username = passwordForm.getUsername();
-        String password = passwordForm.getNewPassword();
-        int rows = authService.updateUserPassword(username, password);
-        if (rows < 0) {
-            LOGGER.info("修改用户密码失败：username={}, admin_id={}", username, userId);
-            return Result.error().message("修改用户密码失败");
-        }
-
-        LOGGER.info("修改用户密码成功：username={}, admin_id={}", username, userId);
-        return Result.ok().message("修改用户密码成功");
+        return null;
     }
 }
