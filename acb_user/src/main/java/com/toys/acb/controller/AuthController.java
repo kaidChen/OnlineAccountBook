@@ -73,22 +73,9 @@ public class AuthController {
         return Result.ok().message("登录成功");
     }
 
-    @ApiOperation("注册账号")
-    @PreAuthorize("hasAnyRole('admin')")
-    @PutMapping("/signup")
-    public Result signup() {
-        SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
-
-        if (user == null) {
-            return Result.error(ResultCode.USER_NOT_LOGIN);
-        }
-
-        return null;
-    }
-
     @ApiOperation("修改自己的密码")
     @PreAuthorize("hasAnyRole('admin', 'user')")
-    @PutMapping("update_password")
+    @PutMapping("update/password")
     public Result updatePassword(@RequestBody @Valid UpdatePasswordReq req) {
         SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
 
@@ -117,9 +104,24 @@ public class AuthController {
         return Result.ok().message("修改成功，请重新登录");
     }
 
+    // todo 实现管理员注册用户的功能
+    @ApiOperation("注册账号")
+    @PreAuthorize("hasAnyRole('admin')")
+    @PutMapping("/signup")
+    public Result signup() {
+        SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
+
+        if (user == null) {
+            return Result.error(ResultCode.USER_NOT_LOGIN);
+        }
+
+        return null;
+    }
+
+    // todo 实现管理员更改用户信息的功能
     @ApiOperation("管理员修改用户信息")
     @PreAuthorize("hasAnyRole('admin')")
-    @PutMapping("/update_user")
+    @PutMapping("/update/user")
     public Result updateUserPassword() {
         SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
 

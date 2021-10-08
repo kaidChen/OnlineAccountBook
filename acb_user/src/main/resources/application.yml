@@ -8,12 +8,6 @@ spring:
 server:
   port: 12358
 
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  params: count=countSql
-
 logging:
   config: acb_user/src/main/resources/logback.xml
 

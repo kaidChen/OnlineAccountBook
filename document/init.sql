@@ -40,7 +40,7 @@ CREATE TABLE sys_user
     password   VARCHAR(256)    NOT NULL,
     status     INT UNSIGNED    NOT NULL DEFAULT 1 COMMENT '锁定：0，可用：1',
     created_at TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP       NULL,
+    updated_at TIMESTAMP       NULL     DEFAULT CURRENT_TIMESTAMP,
     login_at   TIMESTAMP       NULL,
 
     PRIMARY KEY (id),

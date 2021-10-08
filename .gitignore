@@ -1,2 +1,4 @@
-/.idea
-./document/log
+.idea
+*/test/
+*/log/
+*/target/

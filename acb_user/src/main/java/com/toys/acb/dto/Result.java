@@ -21,10 +21,6 @@ public class Result {
     @ApiModelProperty(value = "返回数据")
     private Map<String, Object> data;
 
-    public Result() {
-
-    }
-
     public static Result ok() {
         Result result = new Result();
         result.setSuccess(true);
@@ -50,30 +46,30 @@ public class Result {
     }
 
     public Result success(Boolean success) {
-        this.setSuccess(success);
+        setSuccess(success);
         return this;
     }
 
     public Result message(String message) {
-        this.setMessage(message);
+        setMessage(message);
         return this;
     }
 
     public Result code(Integer code) {
-        this.setCode(code);
+        setCode(code);
         return this;
     }
 
     public Result data(Map<String, Object> map) {
-        this.setData(map);
+        setData(map);
         return this;
     }
 
-    public Result addDate(String name, Object obj) {
-        if (data == null) {
-            data = new HashMap<>();
+    public Result data(String name, Object obj) {
+        if (getData() == null) {
+            setData(new HashMap<>());
         }
-        data.put(name, obj);
+        getData().put(name, obj);
         return this;
     }
 }

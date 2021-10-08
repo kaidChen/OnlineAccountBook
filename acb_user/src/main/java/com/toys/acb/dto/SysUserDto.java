@@ -82,5 +82,14 @@ public class SysUserDto {
                 authorities
         );
     }
+
+    public SysUserDto cloneWithoutSensitivity() {
+        SysUserDto user = new SysUserDto();
+        user.setUsername(getUsername());
+        user.setNickname(getNickname());
+        user.setStatus(getStatus());
+        user.setRoles(getRoles());
+        return user;
+    }
 }
 
