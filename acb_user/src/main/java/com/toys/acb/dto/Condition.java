@@ -10,4 +10,5 @@ public class Condition {
     private LocalDate end;
     private Integer page;
     private Integer size;
+    private Boolean needType;
 }
