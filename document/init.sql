@@ -1,6 +1,6 @@
-# DROP SCHEMA IF EXISTS account_book;
-# CREATE SCHEMA account_book;
-# USE account_book;
+DROP SCHEMA IF EXISTS account_book;
+CREATE SCHEMA account_book;
+USE account_book;
 
 DROP TABLE IF EXISTS bill;
 CREATE TABLE bill

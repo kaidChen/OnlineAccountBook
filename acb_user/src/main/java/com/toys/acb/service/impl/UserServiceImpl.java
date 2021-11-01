@@ -6,7 +6,7 @@ import com.toys.acb.dao.BillTypeDao;
 import com.toys.acb.dao.BillTypePo;
 import com.toys.acb.dto.BillDto;
 import com.toys.acb.dto.BillTypeDto;
-import com.toys.acb.dto.Condition;
+import com.toys.acb.dto.SearchCondition;
 import com.toys.acb.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<BillDto> getBillList(BillDto billDto, Condition cond) {
+    public List<BillDto> getBillList(BillDto billDto, SearchCondition cond) {
         try {
             List<BillPo> billList = billDao.getBillList(new BillPo(billDto), cond.getStart(), cond.getEnd());
             if (billList != null) {
@@ -137,7 +137,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto, Condition cond) {
+    public List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto) {
         try {
             List<BillTypePo> billTypeList = billTypeDao.getBillTypeList(new BillTypePo(billTypeDto));
             if (billTypeList != null) {

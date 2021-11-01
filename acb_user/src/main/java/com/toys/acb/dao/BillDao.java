@@ -53,7 +53,8 @@ public class BillDao {
         DeleteStatementProvider stmt = deleteFrom(bill)
                 .where(id, isEqualTo(record::getId),
                         and(userId, isEqualTo(record::getUserId)),
-                        and(status, isEqualTo(DbCode.BillStatusInvalid)))
+                        and(status, isEqualToWhenPresent(record::getStatus)),
+                        and(typeId, isEqualToWhenPresent(record::getTypeId)))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 

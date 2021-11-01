@@ -2,7 +2,7 @@ package com.toys.acb.service;
 
 import com.toys.acb.dto.BillDto;
 import com.toys.acb.dto.BillTypeDto;
-import com.toys.acb.dto.Condition;
+import com.toys.acb.dto.SearchCondition;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public interface UserService {
 
     BillDto getBill(BillDto billDto);
 
-    List<BillDto> getBillList(BillDto billDto, Condition cond);
+    List<BillDto> getBillList(BillDto billDto, SearchCondition cond);
 
     Integer createBillType(BillTypeDto billTypeDto);
 
@@ -24,5 +24,5 @@ public interface UserService {
 
     BillTypeDto getBillType(BillTypeDto billTypeDto);
 
-    List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto, Condition cond);
+    List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto);
 }
