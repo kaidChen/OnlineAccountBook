@@ -12,8 +12,8 @@ import java.util.List;
 @RestControllerAdvice
 public class BadRequestExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public Result validationBodyException(MethodArgumentNotValidException e) {
+    public Result<Object> validationBodyException(MethodArgumentNotValidException e) {
         List<ObjectError> allErrors = e.getBindingResult().getAllErrors();
-        return Result.error(ResultCode.PARAM_NOT_VALID).message(allErrors.get(allErrors.size() - 1).getDefaultMessage());
+        return new Result<>().error(ResultCode.PARAM_NOT_VALID).message(allErrors.get(allErrors.size() - 1).getDefaultMessage());
     }
 }

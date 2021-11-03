@@ -10,7 +10,7 @@ CREATE TABLE bill
     type_id    BIGINT        NOT NULL,
     created_at DATE          NOT NULL,
     cost       DECIMAL(6, 2) NOT NULL COMMENT '消费金额',
-    status     INT           NOT NULL DEFAULT 1 COMMENT '0：不计入，1：计入',
+    status     INT UNSIGNED  NOT NULL DEFAULT 1 COMMENT '0：不计入，1：计入',
     note       VARCHAR(255)  NULL,
 
     PRIMARY KEY (id),
@@ -22,13 +22,13 @@ DROP TABLE IF EXISTS bill_type;
 CREATE TABLE bill_type
 (
     id      BIGINT UNSIGNED AUTO_INCREMENT,
-    user_id BIGINT      NOT NULL,
-    name    VARCHAR(20) NOT NULL,
-    kind    INT         NOT NULL DEFAULT 0 COMMENT '0：支出，1：收入',
-    status  INT         NOT NULL DEFAULT 1 COMMENT '0：不可见，1：可见',
+    user_id BIGINT       NOT NULL,
+    name    VARCHAR(20)  NOT NULL,
+    kind    INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '0：支出，1：收入',
+    status  INT UNSIGNED NOT NULL DEFAULT 1 COMMENT '0：不可见，1：可见',
 
     PRIMARY KEY (id),
-    UNIQUE KEY uniq_user_name (user_id, name)
+    KEY uniq_user (user_id)
 ) COMMENT '账单类型表';
 
 DROP TABLE IF EXISTS sys_user;

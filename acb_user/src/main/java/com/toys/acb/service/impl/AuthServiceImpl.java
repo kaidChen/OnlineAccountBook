@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -35,12 +36,17 @@ public class AuthServiceImpl implements AuthService {
             user.setUsername(sysUser.getUsername());
             user = sysUserDao.getSysUser(user);
             if (user != null) {
+                user.setLoginAt(LocalDateTime.now());
+
                 SysRolePo roles = new SysRolePo();
                 roles.setUserId(user.getId());
                 List<SysRolePo> sysRoleList = sysRoleDao.getSysRoleList(roles);
 
                 SysUserDto userDto = new SysUserDto();
                 userDto.parseFromPo(user, sysRoleList);
+
+                sysUserDao.updateSysUser(user);
+
                 return userDto;
             }
         } catch (Exception e) {
