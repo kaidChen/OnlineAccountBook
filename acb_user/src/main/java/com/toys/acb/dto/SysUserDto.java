@@ -6,8 +6,8 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.toys.acb.constant.DbCode;
-import com.toys.acb.dao.SysRolePo;
-import com.toys.acb.dao.SysUserPo;
+import com.toys.acb.entity.SysRole;
+import com.toys.acb.entity.SysUser;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -42,7 +42,7 @@ public class SysUserDto {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime loginAt;
 
-    public void parseFromPo(SysUserPo user, List<SysRolePo> roles) {
+    public SysUserDto parseFromPo(SysUser user, List<SysRole> roles) {
         if (user != null) {
             setId(user.getId());
             setUsername(user.getUsername());
@@ -55,15 +55,16 @@ public class SysUserDto {
             setRoles(null);
 
             List<SysRoleDto> roleList = new ArrayList<>();
-            for (SysRolePo role : roles) {
+            for (SysRole role : roles) {
                 SysRoleDto roleDto = new SysRoleDto();
-                roleDto.parseFromPo(role);
-                roleList.add(roleDto);
+                roleList.add(roleDto.parseFromPo(role));
             }
             if (!roleList.isEmpty()) {
                 setRoles(roleList);
             }
         }
+
+        return this;
     }
 
     public UserDetails createUserDetails() {

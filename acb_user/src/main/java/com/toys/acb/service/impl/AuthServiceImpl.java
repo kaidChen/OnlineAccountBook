@@ -1,11 +1,10 @@
 package com.toys.acb.service.impl;
 
-import com.toys.acb.component.SqlSessionBuilder;
 import com.toys.acb.dao.SysRoleDao;
-import com.toys.acb.dao.SysRolePo;
 import com.toys.acb.dao.SysUserDao;
-import com.toys.acb.dao.SysUserPo;
 import com.toys.acb.dto.SysUserDto;
+import com.toys.acb.entity.SysRole;
+import com.toys.acb.entity.SysUser;
 import com.toys.acb.service.AuthService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,24 +29,16 @@ public class AuthServiceImpl implements AuthService {
     private SysRoleDao sysRoleDao;
 
     @Override
-    public SysUserDto login(SysUserDto sysUser) {
+    public SysUserDto login(String username) {
         try {
-            SysUserPo user = new SysUserPo();
-            user.setUsername(sysUser.getUsername());
-            user = sysUserDao.getSysUser(user);
+            SysUser user  = sysUserDao.getSysUserByUsername(username);
             if (user != null) {
                 user.setLoginAt(LocalDateTime.now());
-
-                SysRolePo roles = new SysRolePo();
-                roles.setUserId(user.getId());
-                List<SysRolePo> sysRoleList = sysRoleDao.getSysRoleList(roles);
-
-                SysUserDto userDto = new SysUserDto();
-                userDto.parseFromPo(user, sysRoleList);
-
                 sysUserDao.updateSysUser(user);
 
-                return userDto;
+                List<SysRole> sysRoleList = sysRoleDao.getSysRoleListByUserId(user.getId());
+                SysUserDto userDto = new SysUserDto();
+                return userDto.parseFromPo(user, sysRoleList);
             }
         } catch (Exception e) {
             LOGGER.error("{}", e.getMessage());
@@ -56,13 +47,10 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public Integer updatePassword(SysUserDto sysUser) {
+    public Integer updatePassword(Long userId, String newPassword) {
         try {
-            String encodePW = passwordEncoder.encode(sysUser.getPassword());
-            SysUserPo userForUpdate = new SysUserPo();
-            userForUpdate.setId(sysUser.getId());
-            userForUpdate.setPassword(encodePW);
-            return sysUserDao.updateSysUser(userForUpdate);
+            String encodePW = passwordEncoder.encode(newPassword);
+            return sysUserDao.updatePassword(userId, encodePW);
         } catch (Exception e) {
             LOGGER.error("{}", e.getMessage());
         }

@@ -21,57 +21,36 @@ public class SysUserDao {
     @Autowired
     private SqlSessionBuilder sqlSessionBuilder;
 
-    public Integer createSysUser(SysUserPo record) {
-        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+    public Integer updateSysUser(SysUser record) {
+       try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-            return sysUserMapper.insertSelective(record.parseToDbEntity());
+            return sysUserMapper.updateByPrimaryKeySelective(record);
         }
     }
 
-    public Integer deleteSysUser(SysUserPo record) {
-        DeleteStatementProvider stmt = deleteFrom(sysUser)
-                .where(id, isEqualTo(record::getId))
-                .build()
-                .render(RenderingStrategies.MYBATIS3);
-
-        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-            SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-            return sysUserMapper.delete(stmt);
-        }
-    }
-
-    public Integer updateSysUser(SysUserPo record) {
+    public Integer updatePassword(Long recId, String newPW) {
         UpdateStatementProvider stmt = update(sysUser)
-                .set(nickname).equalToWhenPresent(record::getNickname)
-                .set(password).equalToWhenPresent(record::getPassword)
-                .set(status).equalToWhenPresent(record::getStatus)
-                .set(updatedAt).equalToWhenPresent(record::getUpdatedAt)
-                .set(loginAt).equalToWhenPresent(record::getLoginAt)
-                .where(id, isEqualTo(record::getId))
+                .set(password).equalTo(newPW)
+                .where(id, isEqualTo(recId))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
-
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
             return sysUserMapper.update(stmt);
         }
     }
 
-    public SysUserPo getSysUser(SysUserPo record) {
+    public SysUser getSysUserByUsername(String recUsername) {
         SelectStatementProvider stmt = select(sysUser.allColumns())
                 .from(sysUser)
-                .where(username, isEqualTo(record::getUsername))
+                .where(username, isEqualTo(recUsername))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
             Optional<SysUser> sysUserOpt = sysUserMapper.selectOne(stmt);
-            if (sysUserOpt.isEmpty()) {
-                return null;
-            }
-            SysUser dbRec = sysUserOpt.get();
-            return new SysUserPo(dbRec);
+            return sysUserOpt.orElse(null);
         }
     }
 }

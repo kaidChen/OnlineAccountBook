@@ -45,10 +45,7 @@ public class AuthController {
         String username = req.getUsername();
         String password = req.getPassword();
 
-        SysUserDto userDto = new SysUserDto();
-        userDto.setUsername(username);
-        userDto.setPassword(password);
-        userDto = authService.login(userDto);
+        SysUserDto userDto = authService.login(username);
 
         if (userDto == null) {
             return new Result<>().error(ResultCode.SYSTEM_EXCEPTION);
@@ -91,10 +88,7 @@ public class AuthController {
             return new Result<>().error(ResultCode.USER_CREDENTIALS_ERROR);
         }
 
-        SysUserDto newUser = new SysUserDto();
-        newUser.setId(user.getId());
-        newUser.setPassword(newPW);
-        Integer rows = authService.updatePassword(newUser);
+        Integer rows = authService.updatePassword(user.getId(), newPW);
         if (rows == null) {
             return new Result<>().error(ResultCode.SYSTEM_EXCEPTION);
         }
