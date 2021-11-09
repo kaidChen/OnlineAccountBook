@@ -21,7 +21,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import javax.validation.constraints.PositiveOrZero;
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 
 @RestController
@@ -35,30 +37,43 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @ApiOperation("按条件查询账单")
+    @ApiOperation("按年-月查询账单")
     @PreAuthorize("hasAnyRole('user')")
     @GetMapping("bill_list")
-    public Result<ResultList<ResultList<BillDto>>> getBillListWithCondition(@RequestBody SearchCondition cond) {
+    public Result<MonthBillList> getBillListWithCondition(
+            @RequestParam("year") Integer year,
+            @RequestParam("month") Integer month
+    ) {
         SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
         if (user == null) {
-            return new Result<ResultList<ResultList<BillDto>>>().error(ResultCode.USER_NOT_LOGIN);
+            return new Result<MonthBillList>().error(ResultCode.USER_NOT_LOGIN);
         }
 
-        BillDto searchBill = new BillDto();
-        searchBill.setUserId(user.getId());
-        searchBill.setTypeId(cond.getTypeId());
-        searchBill.setStatus(cond.getStatus());
+        LocalDate now = LocalDate.now();
 
-        List<BillDto> billList = userService.getBillList(searchBill, cond);
+        if (year == null) {
+            year = now.getYear();
+        }
 
+        if (month == null) {
+            month = now.getMonthValue();
+        }
+
+        LocalDate startDate = LocalDate.of(year, month, 1);
+        LocalDate endDate = startDate.with(TemporalAdjusters.lastDayOfMonth());
+        List<BillDto> billList = userService.getBillListOrderByTimeDesc(user.getId(), startDate, endDate);
         if (billList == null) {
-            return new Result<ResultList<ResultList<BillDto>>>().error(ResultCode.SYSTEM_EXCEPTION);
+            return new Result<MonthBillList>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
-        return new Result<ResultList<ResultList<BillDto>>>().ok().data(null);
+        MonthBillList monthlyList = MonthBillList.createMonthBillList(billList);
+        monthlyList.setYear(year);
+        monthlyList.setMonth(month);
+
+        return new Result<MonthBillList>().ok().data(monthlyList);
     }
 
-    @ApiOperation("根据id查询订单")
+    @ApiOperation("根据id查询账单")
     @PreAuthorize("hasAnyRole('user')")
     @GetMapping("bill")
     public Result<BillDto> getBill(@RequestParam("id") @PositiveOrZero Long id) {
@@ -67,13 +82,9 @@ public class UserController {
             return new Result<BillDto>().error(ResultCode.USER_NOT_LOGIN);
         }
 
-        BillDto billDto = new BillDto();
-        billDto.setId(id);
-        billDto.setUserId(user.getId());
-
-        BillDto bill = userService.getBill(billDto);
+        BillDto bill = userService.getBillById(user.getId(), id);
         if (bill == null) {
-            return new Result<BillDto>().error(ResultCode.SYSTEM_EXCEPTION);
+            return new Result<BillDto>().error(ResultCode.DB_DATA_NOT_EXISTS);
         }
         return new Result<BillDto>().ok().data(bill);
     }
@@ -91,9 +102,8 @@ public class UserController {
         billDto.setUserId(user.getId());
         billDto.setTypeId(req.getTypeId());
         billDto.setCost(req.getCost());
-        billDto.setStatus(req.getStatus());
+        billDto.setStatus(DbCode.BillStatusValid);
         billDto.setNote(req.getNote());
-
         Integer rows = userService.createBill(billDto);
         if (rows == null) {
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
@@ -117,9 +127,7 @@ public class UserController {
         billDto.setId(req.getId());
         billDto.setTypeId(req.getTypeId());
         billDto.setCost(req.getCost());
-        billDto.setStatus(req.getStatus());
         billDto.setNote(req.getNote());
-
         Integer rows = userService.updateBill(billDto);
         if (rows == null) {
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
@@ -138,11 +146,7 @@ public class UserController {
             return new Result<Integer>().error(ResultCode.USER_NOT_LOGIN);
         }
 
-        BillDto bill = new BillDto();
-        bill.setUserId(user.getId());
-        bill.setId(id);
-
-        Integer rows = userService.deleteBill(bill);
+        Integer rows = userService.deleteBillById(user.getId(), id);
         if (rows == null) {
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
@@ -160,11 +164,7 @@ public class UserController {
             return new Result<List<BillTypeDto>>().error(ResultCode.USER_NOT_LOGIN);
         }
 
-        BillTypeDto billTypeDto = new BillTypeDto();
-        billTypeDto.setUserId(user.getId());
-        billTypeDto.setStatus(DbCode.BillTypeStatusValid);
-
-        List<BillTypeDto> billTypeList = userService.getBillTypeList(billTypeDto);
+        List<BillTypeDto> billTypeList = userService.getBillTypeListByUserId(user.getId());
         if (billTypeList == null) {
             return new Result<List<BillTypeDto>>().error(ResultCode.SYSTEM_EXCEPTION);
         }
@@ -227,12 +227,7 @@ public class UserController {
             return new Result<Integer>().error(ResultCode.USER_NOT_LOGIN);
         }
 
-        BillTypeDto billTypeDto = new BillTypeDto();
-        billTypeDto.setUserId(user.getId());
-        billTypeDto.setId(id);
-        billTypeDto.setStatus(DbCode.BillTypeStatusInvalid);
-
-        Integer rows = userService.updateBillType(billTypeDto);
+        Integer rows = userService.deleteBillTypeById(user.getId(), id);
         if (rows == null) {
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }

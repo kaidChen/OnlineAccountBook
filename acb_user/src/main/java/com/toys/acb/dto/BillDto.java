@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
-import com.toys.acb.dao.BillPo;
-import com.toys.acb.dao.BillTypePo;
+import com.toys.acb.entity.Bill;
+import com.toys.acb.entity.BillType;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -27,7 +27,7 @@ public class BillDto {
     private String note;
     private BillTypeDto billType;
 
-    public void parseFromPo(BillPo billPo, BillTypePo billTypePo) {
+    public BillDto parseFromPo(Bill billPo, BillType billTypePo) {
         if (billPo != null) {
             setId(billPo.getId());
             setUserId(billPo.getUserId());
@@ -39,10 +39,22 @@ public class BillDto {
             setBillType(null);
             if (billTypePo != null) {
                 BillTypeDto billTypeDto = new BillTypeDto();
-                billTypeDto.parseFromPo(billTypePo);
-                setBillType(billTypeDto);
+                setBillType(billTypeDto.parseFromPo(billTypePo));
             }
         }
+        return this;
+    }
+
+    public Bill parseToPo() {
+        Bill bill = new Bill();
+        bill.setId(id);
+        bill.setUserId(userId);
+        bill.setTypeId(typeId);
+        bill.setCreatedAt(createdAt);
+        bill.setCost(cost);
+        bill.setStatus(status);
+        bill.setNote(note);
+        return bill;
     }
 }
 

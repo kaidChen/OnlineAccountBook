@@ -4,25 +4,27 @@ import com.toys.acb.dto.BillDto;
 import com.toys.acb.dto.BillTypeDto;
 import com.toys.acb.dto.SearchCondition;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface UserService {
-    Integer createBill(BillDto billDto);
+    List<BillDto> getBillListOrderByTimeDesc(Long userId, LocalDate start, LocalDate end);
 
+    List<BillDto> getBillListByTypeId(Long userId, Long typeId, LocalDate start, LocalDate end);
 
-    Integer deleteBill(BillDto billDto);
-
-    Integer updateBill(BillDto billDto);
-
-    BillDto getBill(BillDto billDto);
-
-    List<BillDto> getBillList(BillDto billDto, SearchCondition cond);
-
-    Integer createBillType(BillTypeDto billTypeDto);
+    BillDto getBillById(Long userId, Long id);
 
     Integer updateBillType(BillTypeDto billTypeDto);
 
-    BillTypeDto getBillType(BillTypeDto billTypeDto);
+    Integer createBill(BillDto billDto);
 
-    List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto);
+    Integer updateBill(BillDto billDto);
+
+    List<BillTypeDto> getBillTypeListByUserId(Long userId);
+
+    Integer createBillType(BillTypeDto billTypeDto);
+
+    Integer deleteBillById(Long userId, Long id);
+
+    Integer deleteBillTypeById(Long userId, Long id);
 }

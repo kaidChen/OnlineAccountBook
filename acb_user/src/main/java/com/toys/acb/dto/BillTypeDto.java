@@ -1,6 +1,6 @@
 package com.toys.acb.dto;
 
-import com.toys.acb.dao.BillTypePo;
+import com.toys.acb.entity.BillType;
 import lombok.Data;
 
 @Data
@@ -11,7 +11,7 @@ public class BillTypeDto {
     private Integer kind;
     private Integer status;
 
-    public void parseFromPo(BillTypePo billTypePo) {
+    public BillTypeDto parseFromPo(BillType billTypePo) {
         if (billTypePo != null) {
             setId(billTypePo.getId());
             setUserId(billTypePo.getUserId());
@@ -19,5 +19,16 @@ public class BillTypeDto {
             setKind(billTypePo.getKind());
             setStatus(billTypePo.getStatus());
         }
+        return this;
+    }
+
+    public BillType parseToPo() {
+        BillType billType = new BillType();
+        billType.setId(id);
+        billType.setUserId(userId);
+        billType.setName(name);
+        billType.setKind(kind);
+        billType.setStatus(status);
+        return billType;
     }
 }

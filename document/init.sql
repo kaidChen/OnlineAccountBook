@@ -15,7 +15,7 @@ CREATE TABLE bill
 
     PRIMARY KEY (id),
     KEY key_user_time (user_id, created_at),
-    KEY key_type_id (type_id)
+    KEY key_type_id (user_id, type_id)
 ) COMMENT '账单表';
 
 DROP TABLE IF EXISTS bill_type;

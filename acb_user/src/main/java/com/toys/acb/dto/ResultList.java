@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 public class ResultList<T> {
+    private String desc;
     private BigDecimal cost;
     private List<T> list;
 }

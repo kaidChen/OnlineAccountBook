@@ -5,7 +5,6 @@ import com.toys.acb.constant.DbCode;
 import com.toys.acb.entity.Bill;
 import com.toys.acb.mapper.BillMapper;
 import org.apache.ibatis.session.SqlSession;
-import org.mybatis.dynamic.sql.delete.render.DeleteStatementProvider;
 import org.mybatis.dynamic.sql.render.RenderingStrategies;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
@@ -13,11 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import static com.toys.acb.mapper.BillDynamicSqlSupport.*;
+import static com.toys.acb.mapper.BillDynamicSqlSupport.userId;
 import static org.mybatis.dynamic.sql.SqlBuilder.*;
 
 @Component
@@ -25,21 +24,25 @@ public class BillDao {
     @Autowired
     private SqlSessionBuilder sqlSessionBuilder;
 
-    public Integer createBill(BillPo record) {
+    public Integer createBill(Bill bill) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            return billMapper.insertSelective(record.parseToDbEntity());
+            return billMapper.insertSelective(bill);
         }
     }
 
-    public Integer updateBill(BillPo record) {
+    public Integer updateBill(Bill record) {
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
+            return billMapper.updateByPrimaryKeySelective(record);
+        }
+    }
+
+    public Integer deleteBillById(Long recUserId, Long recId) {
         UpdateStatementProvider stmt = update(bill)
-                .set(typeId).equalToWhenPresent(record::getTypeId)
-                .set(cost).equalToWhenPresent(record::getCost)
-                .set(status).equalToWhenPresent(record::getStatus)
-                .set(note).equalToWhenPresent(record::getNote)
-                .where(id, isEqualTo(record::getId),
-                        and(userId, isEqualTo(record::getUserId)))
+                .set(status).equalTo(DbCode.BillStatusInvalid)
+                .where(id, isEqualTo(recId),
+                        and(userId, isEqualTo(recUserId)))
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 
@@ -49,57 +52,61 @@ public class BillDao {
         }
     }
 
-    public Integer deleteBill(BillPo record) {
-        DeleteStatementProvider stmt = deleteFrom(bill)
-                .where(id, isEqualTo(record::getId),
-                        and(userId, isEqualTo(record::getUserId)),
-                        and(status, isEqualToWhenPresent(record::getStatus)),
-                        and(typeId, isEqualToWhenPresent(record::getTypeId)))
-                .build()
-                .render(RenderingStrategies.MYBATIS3);
-
-        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-            BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            return billMapper.delete(stmt);
-        }
-    }
-
-    public BillPo getBill(BillPo record) {
+    public List<Bill> getValidBillListByUserId(Long recordUserId, LocalDate start, LocalDate end) {
         SelectStatementProvider stmt = select(bill.allColumns())
                 .from(bill)
-                .where(id, isEqualTo(record::getId),
-                        and(userId, isEqualTo(record::getUserId)))
-                .build()
-                .render(RenderingStrategies.MYBATIS3);
-
-        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
-            BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            Optional<Bill> billOpt = billMapper.selectOne(stmt);
-            if (billOpt.isEmpty()) {
-                return null;
-            }
-            return new BillPo(billOpt.get());
-        }
-    }
-
-    public List<BillPo> getBillList(BillPo record, LocalDate start, LocalDate end) {
-        SelectStatementProvider stmt = select(bill.allColumns())
-                .from(bill)
-                .where(userId, isEqualTo(record::getUserId),
-                        and(typeId, isEqualToWhenPresent(record::getTypeId)),
-                        and(status, isEqualToWhenPresent(record::getStatus)),
+                .where(userId, isEqualTo(recordUserId),
                         and(createdAt, isGreaterThanOrEqualToWhenPresent(start)),
-                        and(createdAt, isLessThanOrEqualToWhenPresent(end))
+                        and(createdAt, isLessThanOrEqualToWhenPresent(end)),
+                        and(status, isEqualTo(DbCode.BillStatusValid))
                 )
+                .orderBy(createdAt.descending())
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            List<Bill> bills = billMapper.selectMany(stmt);
-            List<BillPo> billList = new ArrayList<>();
-            bills.forEach(rec -> billList.add(new BillPo(rec)));
-            return billList;
+
+            return billMapper.selectMany(stmt);
+        }
+    }
+
+    public List<Bill> getBillListByUserIdAndTypeId(Long recUserId, Long recTypeId, LocalDate start, LocalDate end) {
+        SelectStatementProvider stmt = select(bill.allColumns())
+                .from(bill)
+                .where(userId, isEqualTo(recUserId),
+                        and(typeId, isGreaterThanOrEqualToWhenPresent(recTypeId)),
+                        and(createdAt, isGreaterThanOrEqualToWhenPresent(start)),
+                        and(createdAt, isLessThanOrEqualToWhenPresent(end)),
+                        and(status, isEqualTo(DbCode.BillStatusValid))
+                )
+                .orderBy(createdAt.descending())
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
+
+            return billMapper.selectMany(stmt);
+        }
+    }
+
+    public Bill getBillById(Long recUserId, Long recId) {
+        SelectStatementProvider stmt = select(bill.allColumns())
+                .from(bill)
+                .where(id, isEqualTo(recId),
+                        and(userId, isEqualTo(recUserId)),
+                        and(status, isEqualTo(DbCode.BillStatusValid))
+                )
+                .orderBy(createdAt.descending())
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
+
+            Optional<Bill> billOptional = billMapper.selectOne(stmt);
+            return billOptional.orElse(null);
         }
     }
 }

@@ -1,20 +1,22 @@
 package com.toys.acb.service.impl;
 
 import com.toys.acb.dao.BillDao;
-import com.toys.acb.dao.BillPo;
 import com.toys.acb.dao.BillTypeDao;
-import com.toys.acb.dao.BillTypePo;
 import com.toys.acb.dto.BillDto;
 import com.toys.acb.dto.BillTypeDto;
-import com.toys.acb.dto.SearchCondition;
+import com.toys.acb.entity.Bill;
+import com.toys.acb.entity.BillType;
 import com.toys.acb.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -22,13 +24,68 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private BillDao billDao;
+
     @Autowired
     private BillTypeDao billTypeDao;
 
     @Override
+    public List<BillDto> getBillListOrderByTimeDesc(Long userId, LocalDate start, LocalDate end) {
+        try {
+            List<BillType> billTypeList = billTypeDao.getAllBillTypesByUserId(userId);
+            Map<Long, BillType> billTypeMap = new HashMap<>();
+            billTypeList.forEach(rec -> billTypeMap.put(rec.getId(), rec));
+
+            List<Bill> billList = billDao.getValidBillListByUserId(userId, start, end);
+            List<BillDto> resultList = new ArrayList<>();
+            for (Bill bill : billList) {
+                BillDto dto = new BillDto();
+                resultList.add(
+                        dto.parseFromPo(
+                                bill,
+                                billTypeMap.getOrDefault(bill.getTypeId(), null)
+                        )
+                );
+            }
+            return resultList;
+        } catch (Exception e) {
+            LOGGER.error("getBillListOrderByTimeDesc error:{}", e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public List<BillDto> getBillListByTypeId(Long userId, Long typeId, LocalDate start, LocalDate end) {
+        try {
+            List<Bill> billList = billDao.getBillListByUserIdAndTypeId(userId, typeId, start, end);
+            List<BillDto> resultList = new ArrayList<>();
+            for (Bill bill : billList) {
+                BillDto dto = new BillDto();
+                resultList.add(dto.parseFromPo(bill, null));
+            }
+            return resultList;
+        } catch (Exception e) {
+            LOGGER.error("getBillListByTypeId error:{}", e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public BillDto getBillById(Long userId, Long id) {
+        try {
+            Bill bill = billDao.getBillById(userId, id);
+            BillType billType = billTypeDao.getBillTypeById(userId, id);
+            BillDto dto = new BillDto();
+            return dto.parseFromPo(bill, billType);
+        } catch (Exception e) {
+            LOGGER.error("getBillById error:{}", e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
     public Integer createBill(BillDto billDto) {
         try {
-            return billDao.createBill(new BillPo(billDto));
+            return billDao.createBill(billDto.parseToPo());
         } catch (Exception e) {
             LOGGER.error("create bill error:{}", e.getMessage());
         }
@@ -36,19 +93,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Integer deleteBill(BillDto billDto) {
-        try {
-            return billDao.deleteBill(new BillPo(billDto));
-        } catch (Exception e) {
-            LOGGER.error("delete bill error:{}", e.getMessage());
-        }
-        return null;
-    }
-
-    @Override
     public Integer updateBill(BillDto billDto) {
         try {
-            return billDao.updateBill(new BillPo(billDto));
+            return billDao.updateBill(billDto.parseToPo());
         } catch (Exception e) {
             LOGGER.error("update bill error:{}", e.getMessage());
         }
@@ -56,46 +103,37 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BillDto getBill(BillDto billDto) {
+    public List<BillTypeDto> getBillTypeListByUserId(Long userId) {
         try {
-            BillPo bill = billDao.getBill(new BillPo(billDto));
-            if (bill != null) {
-                BillTypePo billTypePo = new BillTypePo();
-                billTypePo.setId(bill.getTypeId());
-                billTypePo.setUserId(bill.getUserId());
-                billTypePo = billTypeDao.getBillType(billTypePo);
-                if (billTypePo != null) {
-                    BillDto res = new BillDto();
-                    res.parseFromPo(bill, billTypePo);
-                    return res;
-                }
+            List<BillType> billTypeList = billTypeDao.getVaidBillTypes(userId);
+            List<BillTypeDto> resultList = new ArrayList<>();
+            for (BillType billType : billTypeList) {
+                BillTypeDto dto = new BillTypeDto();
+                resultList.add(dto.parseFromPo(billType));
             }
+            return resultList;
         } catch (Exception e) {
-            LOGGER.error("get bill error:{}", e.getMessage());
+            LOGGER.error("getBillTypeListByUserId error:{}", e.getMessage());
         }
         return null;
     }
 
     @Override
-    public List<BillDto> getBillList(BillDto billDto, SearchCondition cond) {
+    public Integer deleteBillById(Long userId, Long id) {
         try {
-            List<BillPo> billList = billDao.getBillList(new BillPo(billDto), cond.getStart(), cond.getEnd());
-            if (billList != null) {
-                List<BillDto> resList = new ArrayList<>();
-                billList.forEach(rec -> {
-                    BillTypePo billTypePo = new BillTypePo();
-                    billTypePo.setId(rec.getTypeId());
-                    billTypePo.setUserId(rec.getUserId());
-                    billTypePo = billTypeDao.getBillType(billTypePo);
-
-                    BillDto resDto = new BillDto();
-                    resDto.parseFromPo(rec, billTypePo);
-                    resList.add(resDto);
-                });
-                return resList;
-            }
+            return billDao.deleteBillById(userId, id);
         } catch (Exception e) {
-            LOGGER.error("get bill list error:{}", e.getMessage());
+            LOGGER.error("deleteBillById error:{}", e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public Integer deleteBillTypeById(Long userId, Long id) {
+        try {
+            return billTypeDao.deleteBillTypeById(userId, id);
+        } catch (Exception e) {
+            LOGGER.error("deleteBillTypeById error:{}", e.getMessage());
         }
         return null;
     }
@@ -103,54 +141,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public Integer createBillType(BillTypeDto billTypeDto) {
         try {
-            return billTypeDao.createBillType(new BillTypePo(billTypeDto));
+            return billTypeDao.createBillType(billTypeDto.parseToPo());
         } catch (Exception e) {
             LOGGER.error("create bill type error:{}", e.getMessage());
         }
         return null;
     }
 
-
     @Override
     public Integer updateBillType(BillTypeDto billTypeDto) {
         try {
-            return billTypeDao.updateBillType(new BillTypePo(billTypeDto));
+            return billTypeDao.updateBillType(billTypeDto.parseToPo());
         } catch (Exception e) {
             LOGGER.error("update bill type error:{}", e.getMessage());
-        }
-        return null;
-    }
-
-    @Override
-    public BillTypeDto getBillType(BillTypeDto billTypeDto) {
-        try {
-            BillTypePo billType = billTypeDao.getBillType(new BillTypePo(billTypeDto));
-            if (billType != null) {
-                BillTypeDto res = new BillTypeDto();
-                res.parseFromPo(billType);
-                return res;
-            }
-        } catch (Exception e) {
-            LOGGER.error("get bill type error:{}", e.getMessage());
-        }
-        return null;
-    }
-
-    @Override
-    public List<BillTypeDto> getBillTypeList(BillTypeDto billTypeDto) {
-        try {
-            List<BillTypePo> billTypeList = billTypeDao.getBillTypeList(new BillTypePo(billTypeDto));
-            if (billTypeList != null) {
-                List<BillTypeDto> resList = new ArrayList<>();
-                billTypeList.forEach(rec -> {
-                    BillTypeDto res = new BillTypeDto();
-                    res.parseFromPo(rec);
-                    resList.add(res);
-                });
-                return resList;
-            }
-        } catch (Exception e) {
-            LOGGER.error("get bill type list error:{}", e.getMessage());
         }
         return null;
     }
