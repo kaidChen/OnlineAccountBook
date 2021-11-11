@@ -52,15 +52,32 @@ public class BillDao {
         }
     }
 
-    public List<Bill> getValidBillListByUserId(Long recordUserId, LocalDate start, LocalDate end) {
+    public List<Bill> getBillListOrderByDate(Long recordUserId, LocalDate start, LocalDate end) {
         SelectStatementProvider stmt = select(bill.allColumns())
                 .from(bill)
                 .where(userId, isEqualTo(recordUserId),
                         and(createdAt, isGreaterThanOrEqualToWhenPresent(start)),
                         and(createdAt, isLessThanOrEqualToWhenPresent(end)),
-                        and(status, isEqualTo(DbCode.BillStatusValid))
-                )
+                        and(status, isEqualTo(DbCode.BillStatusValid)))
                 .orderBy(createdAt.descending())
+                .build()
+                .render(RenderingStrategies.MYBATIS3);
+
+        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
+            BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
+
+            return billMapper.selectMany(stmt);
+        }
+    }
+
+    public List<Bill> getBillListOrderByType(Long recordUserId, LocalDate start, LocalDate end) {
+        SelectStatementProvider stmt = select(bill.allColumns())
+                .from(bill)
+                .where(userId, isEqualTo(recordUserId),
+                        and(createdAt, isGreaterThanOrEqualToWhenPresent(start)),
+                        and(createdAt, isLessThanOrEqualToWhenPresent(end)),
+                        and(status, isEqualTo(DbCode.BillStatusValid)))
+                .orderBy(typeId)
                 .build()
                 .render(RenderingStrategies.MYBATIS3);
 

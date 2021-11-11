@@ -3,15 +3,13 @@ package com.toys.acb.controller;
 import com.toys.acb.constant.DbCode;
 import com.toys.acb.constant.ResultCode;
 import com.toys.acb.dto.*;
-import com.toys.acb.entity.Bill;
-import com.toys.acb.entity.BillType;
 import com.toys.acb.request.CreateBillReq;
 import com.toys.acb.request.CreateBillTypeReq;
 import com.toys.acb.request.UpdateBillReq;
 import com.toys.acb.request.UpdateBillTypeReq;
 import com.toys.acb.service.UserService;
 import io.swagger.annotations.ApiOperation;
-import org.apache.ibatis.annotations.Update;
+import org.hibernate.validator.constraints.Range;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import javax.validation.constraints.PositiveOrZero;
-import java.math.BigDecimal;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
 import java.util.List;
@@ -40,9 +37,9 @@ public class UserController {
     @ApiOperation("按年-月查询账单")
     @PreAuthorize("hasAnyRole('user')")
     @GetMapping("bill_list")
-    public Result<MonthBillList> getBillListWithCondition(
-            @RequestParam("year") Integer year,
-            @RequestParam("month") Integer month
+    public Result<MonthBillList> getMonthlyBillList(
+            @RequestParam("year") @Pattern(regexp = "[0-9]{4}", message = "年份为4位数字") Integer year,
+            @RequestParam("month") @Range(min = 1, max = 12, message = "1~12") Integer month
     ) {
         SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
         if (user == null) {
@@ -66,11 +63,43 @@ public class UserController {
             return new Result<MonthBillList>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
-        MonthBillList monthlyList = MonthBillList.createMonthBillList(billList);
-        monthlyList.setYear(year);
-        monthlyList.setMonth(month);
+        MonthBillList monthlyList = MonthBillList.newFromList(year, month, billList);
 
         return new Result<MonthBillList>().ok().data(monthlyList);
+    }
+
+    @ApiOperation("按类型归类账单")
+    @PreAuthorize("hasAnyRole('user')")
+    @GetMapping("")
+    public Result<BillListOrderByType> getBillOrderByType(
+            @RequestParam("year") @Pattern(regexp = "[0-9]{4}", message = "年份为4位数字") Integer year,
+            @RequestParam("month") @Range(min = 1, max = 12, message = "1~12") Integer month
+    ) {
+        SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
+        if (user == null) {
+            return new Result<BillListOrderByType>().error(ResultCode.USER_NOT_LOGIN);
+        }
+
+        LocalDate now = LocalDate.now();
+
+        if (year == null) {
+            year = now.getYear();
+        }
+
+        if (month == null) {
+            month = now.getMonthValue();
+        }
+
+        LocalDate startDate = LocalDate.of(year, month, 1);
+        LocalDate endDate = startDate.with(TemporalAdjusters.lastDayOfMonth());
+        List<BillDto> billList = userService.getBillListOrderByType(user.getId(), startDate, endDate);
+        if (billList == null) {
+            return new Result<BillListOrderByType>().error(ResultCode.SYSTEM_EXCEPTION);
+        }
+
+        BillListOrderByType result = BillListOrderByType.createFromList(billList);
+
+        return new Result<BillListOrderByType>().ok().data(result);
     }
 
     @ApiOperation("根据id查询账单")

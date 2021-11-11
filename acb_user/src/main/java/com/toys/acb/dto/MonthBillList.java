@@ -14,7 +14,7 @@ public class MonthBillList {
     private BigDecimal sum;
     private List<DailyBillList> list = new ArrayList<>();
 
-    public static MonthBillList createMonthBillList(List<BillDto> list) {
+    public static MonthBillList newFromList(Integer year, Integer month, List<BillDto> list) {
         if (list == null || list.isEmpty()) {
             return null;
         }
@@ -39,6 +39,9 @@ public class MonthBillList {
             daily.parseFromList();
             monthBillList.setSum(monthBillList.getSum().add(daily.getSum()));
         }
+
+        monthBillList.setYear(year);
+        monthBillList.setMonth(month);
 
         return monthBillList;
     }

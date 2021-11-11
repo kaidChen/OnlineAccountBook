@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
             Map<Long, BillType> billTypeMap = new HashMap<>();
             billTypeList.forEach(rec -> billTypeMap.put(rec.getId(), rec));
 
-            List<Bill> billList = billDao.getValidBillListByUserId(userId, start, end);
+            List<Bill> billList = billDao.getBillListOrderByDate(userId, start, end);
             List<BillDto> resultList = new ArrayList<>();
             for (Bill bill : billList) {
                 BillDto dto = new BillDto();
@@ -54,9 +54,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<BillDto> getBillListByTypeId(Long userId, Long typeId, LocalDate start, LocalDate end) {
+    public List<BillDto> getBillListOrderByType(Long userId, LocalDate start, LocalDate end) {
         try {
-            List<Bill> billList = billDao.getBillListByUserIdAndTypeId(userId, typeId, start, end);
+            List<Bill> billList = billDao.getBillListOrderByType(userId, start, end);
             List<BillDto> resultList = new ArrayList<>();
             for (Bill bill : billList) {
                 BillDto dto = new BillDto();
