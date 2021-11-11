@@ -21,7 +21,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -60,6 +62,7 @@ public class UserController {
         LocalDate endDate = startDate.with(TemporalAdjusters.lastDayOfMonth());
         List<BillDto> billList = userService.getBillListOrderByTimeDesc(user.getId(), startDate, endDate);
         if (billList == null) {
+            LOGGER.error("getBillListOrderByTimeDesc fail, {}, {}, {}", user.getId(), startDate, endDate);
             return new Result<MonthBillList>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -94,10 +97,19 @@ public class UserController {
         LocalDate endDate = startDate.with(TemporalAdjusters.lastDayOfMonth());
         List<BillDto> billList = userService.getBillListOrderByType(user.getId(), startDate, endDate);
         if (billList == null) {
+            LOGGER.error("getBillListOrderByType fail, {}, {}, {}", user.getId(), startDate, endDate);
             return new Result<BillListOrderByType>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
-        BillListOrderByType result = BillListOrderByType.createFromList(billList);
+        Map<Long, BillTypeDto> map = new HashMap<>();
+        List<BillTypeDto> typeList = userService.getBillTypeListByUserId(user.getId());
+        if (typeList == null) {
+            LOGGER.error("getBillTypeListByUserId, {}", user.getId());
+            return new Result<BillListOrderByType>().error(ResultCode.SYSTEM_EXCEPTION);
+        }
+        typeList.forEach(rec -> map.put(rec.getId(), rec));
+
+        BillListOrderByType result = BillListOrderByType.createFromList(billList, map);
 
         return new Result<BillListOrderByType>().ok().data(result);
     }
@@ -113,6 +125,7 @@ public class UserController {
 
         BillDto bill = userService.getBillById(user.getId(), id);
         if (bill == null) {
+            LOGGER.error("getBillById fail, {}, {}", user.getId(), id);
             return new Result<BillDto>().error(ResultCode.DB_DATA_NOT_EXISTS);
         }
         return new Result<BillDto>().ok().data(bill);
@@ -135,6 +148,7 @@ public class UserController {
         billDto.setNote(req.getNote());
         Integer rows = userService.createBill(billDto);
         if (rows == null) {
+            LOGGER.error("createBill fail, {}", billDto);
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -159,6 +173,7 @@ public class UserController {
         billDto.setNote(req.getNote());
         Integer rows = userService.updateBill(billDto);
         if (rows == null) {
+            LOGGER.error("updateBill fail, {}", billDto);
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -177,6 +192,7 @@ public class UserController {
 
         Integer rows = userService.deleteBillById(user.getId(), id);
         if (rows == null) {
+            LOGGER.error("deleteBillById, {}, {}", user.getId(), id);
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -195,6 +211,7 @@ public class UserController {
 
         List<BillTypeDto> billTypeList = userService.getBillTypeListByUserId(user.getId());
         if (billTypeList == null) {
+            LOGGER.error("getBillTypeListByUserId fail, {}", user.getId());
             return new Result<List<BillTypeDto>>().error(ResultCode.SYSTEM_EXCEPTION);
         }
         return new Result<List<BillTypeDto>>().ok().data(billTypeList);
@@ -213,9 +230,9 @@ public class UserController {
         billTypeDto.setId(req.getId());
         billTypeDto.setUserId(user.getId());
         billTypeDto.setName(req.getName());
-        billTypeDto.setKind(req.getKind());
         Integer rows = userService.updateBillType(billTypeDto);
         if (rows == null) {
+            LOGGER.error("updateBillType fail, {}", billTypeDto);
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -240,6 +257,7 @@ public class UserController {
 
         Integer rows = userService.createBillType(billTypeDto);
         if (rows == null) {
+            LOGGER.error("createBillType fail, {}", billTypeDto);
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
@@ -258,6 +276,7 @@ public class UserController {
 
         Integer rows = userService.deleteBillTypeById(user.getId(), id);
         if (rows == null) {
+            LOGGER.error("deleteBillTypeById fail, {}, {}", user.getId(), id);
             return new Result<Integer>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
