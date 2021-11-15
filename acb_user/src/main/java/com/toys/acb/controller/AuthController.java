@@ -93,10 +93,10 @@ public class AuthController {
             return new Result<>().error(ResultCode.SYSTEM_EXCEPTION);
         }
 
-        request.getSession().invalidate();
+        sessionUtil.deleteSession(user.getUsername());
 
         LOGGER.info("修改密码成功，用户：{}", user.getUsername());
-        return new Result<>().ok().message("修改成功，请重新登录");
+        return new Result<>().ok().message("修改成功，请重新登录").data(rows);
     }
 
     // todo 实现管理员注册用户的功能

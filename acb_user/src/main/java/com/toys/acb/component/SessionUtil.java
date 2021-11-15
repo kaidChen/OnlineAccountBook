@@ -17,10 +17,11 @@ public class SessionUtil {
         map.put(username, session);
     }
 
-    private void deleteSession(String username) {
+    public void deleteSession(String username) {
         HttpSession session = map.getOrDefault(username, null);
         if (session != null) {
             session.invalidate();
+            map.remove(username);
         }
     }
 

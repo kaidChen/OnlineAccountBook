@@ -24,7 +24,9 @@ public class SysUserDao {
     public Integer updateSysUser(SysUser record) {
        try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-            return sysUserMapper.updateByPrimaryKeySelective(record);
+            Integer rows = sysUserMapper.updateByPrimaryKeySelective(record);
+           sqlSession.commit();
+           return rows;
         }
     }
 
@@ -36,7 +38,9 @@ public class SysUserDao {
                 .render(RenderingStrategies.MYBATIS3);
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
-            return sysUserMapper.update(stmt);
+            Integer rows = sysUserMapper.update(stmt);
+            sqlSession.commit();
+            return rows;
         }
     }
 

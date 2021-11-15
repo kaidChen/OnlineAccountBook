@@ -27,14 +27,18 @@ public class BillDao {
     public Integer createBill(Bill bill) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            return billMapper.insertSelective(bill);
+            Integer rows = billMapper.insertSelective(bill);
+            sqlSession.commit();
+            return rows;
         }
     }
 
     public Integer updateBill(Bill record) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            return billMapper.updateByPrimaryKeySelective(record);
+            Integer rows = billMapper.updateByPrimaryKeySelective(record);
+            sqlSession.commit();
+            return rows;
         }
     }
 
@@ -48,7 +52,9 @@ public class BillDao {
 
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillMapper billMapper = sqlSession.getMapper(BillMapper.class);
-            return billMapper.update(stmt);
+            Integer rows = billMapper.update(stmt);
+            sqlSession.commit();
+            return rows;
         }
     }
 

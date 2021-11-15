@@ -25,14 +25,18 @@ public class BillTypeDao {
     public Integer createBillType(BillType record) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillTypeMapper billTypeMapper = sqlSession.getMapper(BillTypeMapper.class);
-            return billTypeMapper.insertSelective(record);
+            Integer rows = billTypeMapper.insertSelective(record);
+            sqlSession.commit();
+            return rows;
         }
     }
 
     public Integer updateBillType(BillType record) {
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillTypeMapper billTypeMapper = sqlSession.getMapper(BillTypeMapper.class);
-            return billTypeMapper.updateByPrimaryKeySelective(record);
+            Integer rows = billTypeMapper.updateByPrimaryKeySelective(record);
+            sqlSession.commit();
+            return rows;
         }
     }
 
@@ -45,7 +49,9 @@ public class BillTypeDao {
                 .render(RenderingStrategies.MYBATIS3);
         try (SqlSession sqlSession = sqlSessionBuilder.getSqlSession()) {
             BillTypeMapper billTypeMapper = sqlSession.getMapper(BillTypeMapper.class);
-            return billTypeMapper.update(stmt);
+            Integer rows = billTypeMapper.update(stmt);
+            sqlSession.commit();
+            return rows;
         }
     }
 
