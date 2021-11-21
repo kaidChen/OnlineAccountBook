@@ -10,8 +10,8 @@ import java.util.Map;
 @Data
 public class BillListOrderByType {
     private String desc;
-    private BigDecimal income;
-    private BigDecimal outcome;
+    private BigDecimal income = new BigDecimal("0.0");
+    private BigDecimal outcome = new BigDecimal("0.0");
     private List<BillOfSameType> list = new ArrayList<>();
 
     public static BillListOrderByType createFromList(List<BillDto> billList, Map<Long, BillTypeDto> map) {
@@ -26,11 +26,11 @@ public class BillListOrderByType {
         for (BillDto dto : billList) {
             if (typeIdPtr == null) {
                 typeIdPtr = dto.getTypeId();
-                sameType.setDto(map.getOrDefault(typeIdPtr, null));
+                sameType.setType(map.getOrDefault(typeIdPtr, null));
             } else if(!typeIdPtr.equals(dto.getTypeId())){
                 typeIdPtr = dto.getTypeId();
                 sameType = new BillOfSameType();
-                sameType.setDto(map.getOrDefault(typeIdPtr, null));
+                sameType.setType(map.getOrDefault(typeIdPtr, null));
                 billListOrderByType.getList().add(sameType);
             }
 
@@ -43,7 +43,7 @@ public class BillListOrderByType {
 
 @Data
 class BillOfSameType {
-    private BillTypeDto dto;
-    private BigDecimal sum;
+    private BillTypeDto type;
+    private BigDecimal sum = new BigDecimal("0.0");
     private List<BillDto> list = new ArrayList<>();
 }

@@ -12,8 +12,8 @@ import java.util.List;
 public class MonthBillList {
     private Integer year;
     private Integer month;
-    private BigDecimal income;
-    private BigDecimal outcome;
+    private BigDecimal income = new BigDecimal("0.0");
+    private BigDecimal outcome = new BigDecimal("0.0");
     private List<DailyBillList> list = new ArrayList<>();
 
     public static MonthBillList newFromList(Integer year, Integer month, List<BillDto> list) {
@@ -55,8 +55,8 @@ public class MonthBillList {
 @Data
 class DailyBillList {
     private String date;
-    private BigDecimal income;
-    private BigDecimal outcome;
+    private BigDecimal income = new BigDecimal("0.0");
+    private BigDecimal outcome = new BigDecimal("0.0");
     private List<BillDto> list = new ArrayList<>();
 
     public void parseFromList() {
@@ -64,7 +64,7 @@ class DailyBillList {
             return;
         }
 
-        this.date = list.get(1).getCreatedAt().toString();
+        this.date = list.get(0).getCreatedAt().toString();
         for (BillDto dto : this.list) {
             if (dto.getBillType().getKind().equals(DbCode.BillTypeKindIncome)) {
                 this.income = this.income.add(dto.getCost());
