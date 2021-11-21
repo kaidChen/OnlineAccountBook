@@ -199,7 +199,7 @@ public class UserController {
         }
 
         LOGGER.info("用户:{},删除账单id:{}", user.getUsername(), id);
-        return new Result<Integer>().ok().message("update bill success").data(rows);
+        return new Result<Integer>().ok().message("delete bill success").data(rows);
     }
 
     @ApiOperation("获取账单类型列表")
