@@ -184,7 +184,7 @@ public class UserController {
     @ApiOperation("删除账单")
     @PreAuthorize("hasAnyRole('user')")
     @DeleteMapping("bill")
-    public Result<Integer> deleteBill(@RequestParam("id") @PositiveOrZero Long id) {
+    public Result<Integer> deleteBill(@RequestParam("id") Long id) {
         SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
         if (user == null) {
             return new Result<Integer>().error(ResultCode.USER_NOT_LOGIN);
@@ -268,7 +268,7 @@ public class UserController {
     @ApiOperation("删除账单类型")
     @PreAuthorize("hasAnyRole('user')")
     @DeleteMapping("type")
-    public Result<Integer> deleteType(@RequestParam("id") @PositiveOrZero Long id) {
+    public Result<Integer> deleteType(@RequestParam("id") Long id) {
         SysUserDto user = (SysUserDto) request.getSession().getAttribute(SessionAttributeUser);
         if (user == null) {
             return new Result<Integer>().error(ResultCode.USER_NOT_LOGIN);

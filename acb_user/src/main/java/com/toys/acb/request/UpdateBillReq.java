@@ -8,8 +8,7 @@ import java.math.BigDecimal;
 
 @Data
 public class UpdateBillReq {
-    @PositiveOrZero
-    private Long id;
+    private long id;
 
     @PositiveOrZero
     private Long typeId;
