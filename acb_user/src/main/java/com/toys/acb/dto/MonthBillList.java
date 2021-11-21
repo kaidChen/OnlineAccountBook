@@ -17,11 +17,12 @@ public class MonthBillList {
     private List<DailyBillList> list = new ArrayList<>();
 
     public static MonthBillList newFromList(Integer year, Integer month, List<BillDto> list) {
+        MonthBillList monthBillList = new MonthBillList();
+
         if (list == null || list.isEmpty()) {
-            return null;
+            return monthBillList;
         }
 
-        MonthBillList monthBillList = new MonthBillList();
         DailyBillList dailyBillList = new DailyBillList();
         monthBillList.getList().add(dailyBillList);
         LocalDate datePtr = null;

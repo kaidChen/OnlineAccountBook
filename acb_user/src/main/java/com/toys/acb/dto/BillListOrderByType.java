@@ -15,11 +15,12 @@ public class BillListOrderByType {
     private List<BillOfSameType> list = new ArrayList<>();
 
     public static BillListOrderByType createFromList(List<BillDto> billList, Map<Long, BillTypeDto> map) {
+        BillListOrderByType billListOrderByType = new BillListOrderByType();
+
         if (billList == null || billList.isEmpty()) {
-            return null;
+            return billListOrderByType;
         }
 
-        BillListOrderByType billListOrderByType = new BillListOrderByType();
         BillOfSameType sameType = new BillOfSameType();
         billListOrderByType.getList().add(sameType);
         Long typeIdPtr = null;

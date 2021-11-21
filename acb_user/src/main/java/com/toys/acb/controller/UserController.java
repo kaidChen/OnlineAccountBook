@@ -39,7 +39,7 @@ public class UserController {
 
     @ApiOperation("按年-月查询账单")
     @PreAuthorize("hasAnyRole('user')")
-    @GetMapping("bill_list")
+    @GetMapping("bill/by_month")
     public Result<MonthBillList> getMonthlyBillList(
             @RequestParam("year") @Pattern(regexp = "[0-9]{4}", message = "年份为4位数字") Integer year,
             @RequestParam("month") @Range(min = 1, max = 12, message = "1~12") Integer month
@@ -74,7 +74,7 @@ public class UserController {
 
     @ApiOperation("按类型归类账单")
     @PreAuthorize("hasAnyRole('user')")
-    @GetMapping("")
+    @GetMapping("bill/by_type")
     public Result<BillListOrderByType> getBillOrderByType(
             @RequestParam("year") @Pattern(regexp = "[0-9]{4}", message = "年份为4位数字") Integer year,
             @RequestParam("month") @Range(min = 1, max = 12, message = "1~12") Integer month
