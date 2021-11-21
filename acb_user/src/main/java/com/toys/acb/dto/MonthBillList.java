@@ -57,7 +57,7 @@ class DailyBillList {
     private String date;
     private BigDecimal income;
     private BigDecimal outcome;
-    private List<BillDto> list;
+    private List<BillDto> list = new ArrayList<>();
 
     public void parseFromList() {
         if (this.list == null || list.isEmpty()) {

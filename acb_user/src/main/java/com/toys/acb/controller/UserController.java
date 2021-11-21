@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.HashMap;
 import java.util.List;
@@ -146,6 +147,7 @@ public class UserController {
         billDto.setCost(req.getCost());
         billDto.setStatus(DbCode.BillStatusValid);
         billDto.setNote(req.getNote());
+        billDto.setCreatedAt(LocalDate.now());
         Integer rows = userService.createBill(billDto);
         if (rows == null) {
             LOGGER.error("createBill fail, {}", billDto);

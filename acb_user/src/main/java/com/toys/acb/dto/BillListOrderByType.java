@@ -3,6 +3,7 @@ package com.toys.acb.dto;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +12,7 @@ public class BillListOrderByType {
     private String desc;
     private BigDecimal income;
     private BigDecimal outcome;
-    private List<BillOfSameType> list;
+    private List<BillOfSameType> list = new ArrayList<>();
 
     public static BillListOrderByType createFromList(List<BillDto> billList, Map<Long, BillTypeDto> map) {
         if (billList == null || billList.isEmpty()) {
@@ -44,5 +45,5 @@ public class BillListOrderByType {
 class BillOfSameType {
     private BillTypeDto dto;
     private BigDecimal sum;
-    private List<BillDto> list;
+    private List<BillDto> list = new ArrayList<>();
 }

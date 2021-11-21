@@ -7,6 +7,6 @@ import org.hibernate.validator.constraints.Length;
 public class UpdateBillTypeReq {
     private long id;
 
-    @Length(min = 1, max = 10, message = "名称长度1~10")
+    @Length(min = 1, max = 30, message = "名称长度1~30")
     private String name;
 }
